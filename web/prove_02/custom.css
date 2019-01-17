@@ -3,3 +3,10 @@
      -moz-border-radius: 0 !important;
           border-radius: 0 !important;
 }
+
+header {
+	padding: 40px;
+	background-color: lightgrey;
+	color: white;
+	text-align: center;
+}
