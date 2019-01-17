@@ -14,7 +14,7 @@
 	require 'header.php';
 	?>
 	<div class="container-fluid">
-		<p><i>Oh, sometimes I sit and think, and then again I just sit.</i></p>
+		<h3 class="text-center"><i>"Oh, sometimes I sit and think, and then again I just sit."</i></h3>
 		<div class="row">
 			<div class="col-sm-4">.col-sm-4</div>
 			<div class="col-sm-8">.col-sm-8</div>
