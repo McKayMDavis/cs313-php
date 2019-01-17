@@ -13,6 +13,8 @@
 	<?php
 	require 'header.php';
 	?>
-	<p>Coming Soon!</p>
+	<div class="container-fluid">
+		<p>Coming Soon!</p>
+	</div>
 </body>
 </html>

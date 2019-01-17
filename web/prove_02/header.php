@@ -2,8 +2,17 @@
 $current = basename($_SERVER['PHP_SELF']);
 
 echo "
-<header>
-		<h1>Homepage</h1>
+<header>";
+
+if ($current == "home.php") {
+	echo "
+		<h1>About Sitting</h1>";
+} elseif ($current == "assignments.php") {
+	echo "
+		<h1>Assignments</h1>";
+}
+
+echo "		
 </header>
 <nav class='navbar navbar-inverse'>
 	<div class='container-fluid'>
