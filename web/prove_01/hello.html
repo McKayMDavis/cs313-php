@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script type="text/javascript">
+		function hide() {
+			document.getElementById('side').style.display = 'none';
+			document.getElementById('hideButton').style.display = 'none';
+			document.getElementById('showButton').style.display = 'inline-block';
+		}
+
+		function show() {
+			document.getElementById('side').style.display = 'inline-block';
+			document.getElementById('hideButton').style.display = 'inline-block';
+			document.getElementById('showButton').style.display = 'none';
+		}
+	</script>
+</head>
+<body>
+	<header>
+		<h1>Hello World! I'm a Home Page!</h1>
+	</header>
+	<div class="nav">
+		<button id="hideButton" onclick="hide()">&#9776;</button>
+		<button id="showButton" onclick="show()" style="display: none;">&#9776;</button>
+	</div>
+	<div class="row">
+		<div class="side" id="side">
+			<h3>Table of Contents</h3>
+			<hr />
+			<h4><a href="./hello.html">Home</a></li></h4>
+			<h4>Section Header</h4>
+			<ul>
+				<li><a href="link to page">Fake Link</a></li>
+				<li><a href="link to page">Fake Link</a></li>
+				<li><a href="link to page">Fake Link</a></li>
+			</ul>
+		</div>
+		<div class="main">
+			<h1>Welcome</h1>
+			<hr />
+			<p>Welcome to this nice home page designed to be a page that is the home of a website.</p>
+		</div>
+	</div>
+	<footer>
+		<div class="row">
+			<div class="col">
+				<h3>External Links</h3>
+				<a href="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program">History: "Hello World"</a>
+			</div>
+			<div class="col">
+				<h3>Resources</h3>
+				<a href="https://introcs.cs.princeton.edu/java/11hello/">How To: "Hello World"</a>
+			</div>
+			<div class="col">
+				
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,112 @@
+:root {
+	--green: rgb(190, 217, 118);
+	--blue: rgb(15, 114, 158);
+	--coral: rgb(249, 174, 92);
+
+	--orange: rgb(236, 122, 34);
+	--grey: rgb(76, 76, 76);
+	--lightgrey: rgb(128, 128, 128);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial;
+	margin: 0;
+}
+
+header {
+	padding: 40px;
+	background-color: var(--grey);
+	color: white;
+	text-align: center;
+}
+
+.nav {
+	background-color: black;
+	color: white;
+}
+
+button {
+  font-size: 25px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.col {
+	flex: 30%;
+	padding: 10px;
+}
+
+.side {
+	flex: 20%;
+	padding: 20px;
+	background-color: var(--blue);
+	color: white;
+	min-height: calc(100vh - 50px);
+}
+
+.side ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.side a:link, a:visited {
+	padding: 10px;
+	color: white;
+	text-decoration: none;
+	display: inline-block;
+	width: 100%;
+}
+
+
+.side a:hover, a:active {
+	color: black;
+	background-color: lightgray;
+	width: 100%;
+}
+
+.main {
+	flex: 80%;
+	padding: 20px;
+	min-height: calc(100vh - 50px);
+}
+
+footer {
+	padding: 20px;
+	background-color: var(--grey);
+	color: white;
+	text-align: center
+}
+
+footer a:link, a:visited {
+	padding: 10px;
+	color: white;
+	text-decoration: none;
+	display: inline-block;
+	width: 100%;
+}
+
+
+footer a:hover, a:active {
+	color: black;
+	background-color: lightgray;
+	width: 100%;
+}
+
+@media screen and (max-width: 300px) {
+  .row {   
+    flex-direction: column;
+  }
+}
