@@ -15,6 +15,7 @@
 	?>
 	<div class="container-fluid">
 		<h3 class="text-center"><i>"Oh, sometimes I sit and think, and then again I just sit."</i></h3>
+		<h3 class="text-center"><i><a href="https://quoteinvestigator.com/2018/08/29/sit/">-Anonymous Old Fisherman in 1905</a></i></h3>
 		<hr/>
 		<h4>History</h4>
 		<div class="row">
