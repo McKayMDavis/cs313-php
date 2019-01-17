@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="container-fluid">
-	<header>
+	<header style="background-color: lightgrey">
 		<h1>Homepage</h1>
 	</header>
 	<nav class="navbar navbar-inverse">
@@ -21,7 +21,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span> 
 				</button>
-				<a class="navbar-brand" href="#">WebSiteName</a>
+				<!--<a class="navbar-brand" href="#">WebSiteName</a>-->
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
