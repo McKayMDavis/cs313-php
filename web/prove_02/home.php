@@ -9,7 +9,9 @@
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-
+<div class="container-fluid">
+	<header><h1>Homepage</h1></header>
+</div>
 <div class="container">
 	<div class="row">
   		<div class="col-sm-4">.col-sm-4</div>
