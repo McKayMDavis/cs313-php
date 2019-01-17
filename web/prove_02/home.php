@@ -24,7 +24,7 @@
 			</div>
 			<div class="col-sm-4">
 				<div class="media">
-					<img src="images/sitting_caveman.jpg" class="media-object">
+					<img src="images/sitting_caveman.jpg" class="media-object" style="width: 100%">
 				</div>
 			</div>
 		</div>
