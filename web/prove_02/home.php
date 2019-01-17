@@ -15,9 +15,13 @@
 	?>
 	<div class="container-fluid">
 		<h3 class="text-center"><i>"Oh, sometimes I sit and think, and then again I just sit."</i></h3>
+		<hr/>
+		<h4>History</h4>
 		<div class="row">
-			<div class="col-sm-4">.col-sm-4</div>
-			<div class="col-sm-8">.col-sm-8</div>
+			<div class="col-sm-8">
+				Sitting has been part of humanity since before humans were humans--just look at apes!
+			</div>
+			<div class="col-sm-4">.col-sm-8</div>
 		</div>
 	</div>
 </body>
