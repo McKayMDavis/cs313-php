@@ -18,11 +18,13 @@
 		<h5 class="text-center"><i><a href="https://quoteinvestigator.com/2018/08/29/sit/">-Anonymous Old Fisherman in 1905</a></i></h5>
 		<hr/>
 		<div class="row">
-			<div class="col-sm-6">
+			<div class="col-sm-8">
 				<h4>History</h4>
-				<p>Sitting has been part of humanity since before humans were humans--just look at apes, they sit. These days, we might sit on a couch, chair, or something else raised. In ages past, we would have likely just sat on the ground, tree stumps, or rocks. In a way, every time you are outdoors and sit on a log or rock, you are gaining a deeper connection to our ancient predecessors. Think back on a time when you have sat. Did it feel nostalgic? Now you know why.</p>
+				<p>Sitting has been part of humanity since before humans were humans--just look at apes, they sit. These days, we might sit on a couch, chair, or stool (I bet that solved some unanswered questions about various objects found in your house). In ages past, we would have likely just sat on the ground, tree stumps, or rocks. In a way, every time you are outdoors and sit on a log or rock, you are gaining a deeper connection to our ancient predecessors. Think back on a time when you have sat. Did it feel nostalgic? Now you know why.</p>
+
+				<p>As sitting progressed through the ages...it largely remained the same, requiring the same form, muscles, and actions regardless of the item being sat upon. The typical sitting form is to place one's hind-quarters upon some object, balancing the majority of your bodyweight on this end, but using your feet as stabilizers. This is not the case always as you will find out if you follow our program explained in the conclusion.</p>
 			</div>
-			<div class="col-sm-6">
+			<div class="col-sm-4">
 				<div class="media">
 					<img src="images/sitting_caveman.jpg" class="media-object img-width">
 				</div>
