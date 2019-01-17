@@ -29,10 +29,12 @@
 			</div>
 		</div>
 		<div class="row">
+			<div class="col-sm-12">
 				<h4>Why Sit?</h4>
 				<p>Right now you are probably asking, "Well, that's some really neat history, but why should I even consider sitting?" If you aren't asking this question, you are probably already an avid sitter, in which case, please leave this page so we can save our limited server space for those that really need it.</p>
 
 				<p>The main reason you should consider sitting is that it is healthy. There are many foot and leg diseases associated with never sitting. I'll save you the gory details. Besides your health (honestly though, if you need another reason, you might want to see a doctor) sitting is comfortable and enjoyable. Every expert I have ever interviewed on the topic agrees that sitting is nice. If you don't believe me, go ask anyone who is anyone.</p>
+			</div>
 		</div>
 	</div>
 </body>
