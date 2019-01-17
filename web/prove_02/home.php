@@ -23,17 +23,9 @@
 				Sitting has been part of humanity since before humans were humans--just look at apes, they sit. These days, we might sit on a couch, chair, or something else raised. In ages past, we would have likely just sat on the ground, tree stumps, or rocks. In a way, every time you are outdoors and sit on a log or rock, you are gaining a deeper connection to our ancient predecessors. Think back on a time when you have sat. Did it feel nostalgic? Now you know why.
 			</div>
 			<div class="col-sm-4">
-				<img src="images/sitting_caveman.jpg" class="media-object">
-			</div>
-		</div>
-
-		<div class="media">
-			<div class="media-body">
-				<h4 class="media-heading">John Doe</h4>
-				<p>Sitting has been part of humanity since before humans were humans--just look at apes, they sit. These days, we might sit on a couch, chair, or something else raised. In ages past, we would have likely just sat on the ground, tree stumps, or rocks. In a way, every time you are outdoors and sit on a log or rock, you are gaining a deeper connection to our ancient predecessors. Think back on a time when you have sat. Did it feel nostalgic? Now you know why.</p>
-			</div>
-			<div class="media-right">
-				<img src="images/sitting_caveman.jpg" class="media-object" style="width:60px">
+				<div class="media">
+					<img src="images/sitting_caveman.jpg" class="media-object">
+				</div>
 			</div>
 		</div>
 	</div>
