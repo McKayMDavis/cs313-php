@@ -18,11 +18,11 @@
 		<h5 class="text-center"><i><a href="https://quoteinvestigator.com/2018/08/29/sit/">-Anonymous Old Fisherman in 1905</a></i></h5>
 		<hr/>
 		<div class="row">
-			<div class="col-sm-8">
+			<div class="col-sm-6">
 				<h4>History</h4>
 				<p>Sitting has been part of humanity since before humans were humans--just look at apes, they sit. These days, we might sit on a couch, chair, or something else raised. In ages past, we would have likely just sat on the ground, tree stumps, or rocks. In a way, every time you are outdoors and sit on a log or rock, you are gaining a deeper connection to our ancient predecessors. Think back on a time when you have sat. Did it feel nostalgic? Now you know why.</p>
 			</div>
-			<div class="col-sm-4">
+			<div class="col-sm-6">
 				<div class="media">
 					<img src="images/sitting_caveman.jpg" class="media-object img-width">
 				</div>
