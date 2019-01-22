@@ -9,7 +9,14 @@ $name = $_POST["name"];
 $email = $_POST["email"];
 $major = $_POST["major"];
 $comments = $_POST["comments"];
-$continents = $_POST["country"];
+$conts = $_POST["country"];
+$continents = array("na"=>"North America",
+					"sa"=>"South America",
+					"eu"=>"Europe",
+					"a"=>"Asia",
+					"au"=>"Australia",
+					"af"=>"Africa",
+					"ant"=>"Antarctica");
 ?>
 
 Name: <?php echo $name;?>
@@ -22,8 +29,12 @@ Comments: <?php echo $comments;?>
 <br>
 Continents:
 <?php
-foreach ($continents as $selected) {
-	echo "$selected <br>";
+foreach ($cont as $i) {
+	foreach($continents as $x => $x_val) {
+		if ($i == $x) {
+			echo $x_val;
+		}
+	}
 }
 ?>
 </body>

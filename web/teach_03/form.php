@@ -8,7 +8,14 @@
 	$majors = array("CS"=>"Computer Science",
 					"WDD"=>"Web Design and Development",
 					"CIT"=>"Computer Information Technology",
-					"CE"=>"Computer Engineering")
+					"CE"=>"Computer Engineering");
+	$continents = array("na"=>"North America",
+						"sa"=>"South America",
+						"eu"=>"Europe",
+						"a"=>"Asia",
+						"au"=>"Australia",
+						"af"=>"Africa",
+						"ant"=>"Antarctica");
 	?>
 	<form action="results.php" method="post">
 		Name
@@ -33,14 +40,11 @@
 		<br>
 		Continents
 		<br>
-		<input type="checkbox" name="country[]" value="na"> North America	<br>	
-		<input type="checkbox" name="country[]" value="sa"> South America <br>
-		<input type="checkbox" name="country[]" value="eu"> Europe <br>
-		<input type="checkbox" name="country[]" value="asia"> Asia <br>
-		<input type="checkbox" name="country[]" value="au"> Australia <br>
-		<input type="checkbox" name="country[]" value="africa"> Africa <br>
-		<input type="checkbox" name="country[]" value="ant"> Antarctica <br>
-		<br>
+		<?php
+		foreach($continents as $x => $x_val) {
+			echo "<input type='checkbox' name='country[]' value=$x> $x_val <br>"
+		}
+		?>
 		<button type="submit">Submit</button>
 	</form>
 
