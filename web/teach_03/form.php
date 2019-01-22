@@ -4,6 +4,12 @@
 	<title>bob</title>
 </head>
 <body>
+	<?php
+	$majors = array("CS"=>"Computer Science",
+					"WDD"=>"Web Design and Development",
+					"CIT"=>"Computer Information Technology",
+					"CE"=>"Computer Engineering")
+	?>
 	<form action="results.php" method="post">
 		Name
 		<br>
@@ -15,11 +21,11 @@
 		<br>
 		Major
 		<br>
-		<input type="radio" name="major" value="CS" checked="checked"> CS
-		<br>
-		<input type="radio" name="major" value="WDD"> WDD
-		<br>
-		<input type="radio" name="major" value="CIT"> CIT
+		<?php
+		foreach($majors as $i) {
+			echo "<input type='radio' name='major' value='$i'> $i <br>";
+		}
+		?>
 		<br>
 		Comments
 		<br>
