@@ -22,8 +22,8 @@ Comments: <?php echo $comments;?>
 <br>
 Continents:
 <?php
-foreach ($continents as $continent) {
-	echo "$continent <br>";
+foreach ($continents as $value) {
+	echo "$value <br>";
 }
 ?>
 </body>
