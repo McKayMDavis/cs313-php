@@ -13,7 +13,7 @@ $comments = $_POST["comments"];
 
 Name: <?php echo $name;?>
 <br>
-Email: <a href= "'"<?php echo "mailto:" . $email;?>"'" > <?php echo $email; ?> </a>
+Email: <a href= <?php echo "mailto:" . $email;?> > <?php echo $email; ?> </a>
 <br>
 Major: <?php echo $major;?>
 <br>
