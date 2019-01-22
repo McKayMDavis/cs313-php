@@ -42,7 +42,7 @@
 		<br>
 		<?php
 		foreach($continents as $x => $x_val) {
-			echo "<input type='checkbox' name='country[]' value=$x> $x_val <br>"
+			echo "<input type='checkbox' name='country[]' value=$x> $x_val <br>";
 		}
 		?>
 		<button type="submit">Submit</button>
