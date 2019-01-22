@@ -29,7 +29,7 @@ Comments: <?php echo $comments;?>
 <br>
 Continents:
 <?php
-foreach ($cont as $i) {
+foreach ($conts as $i) {
 	foreach($continents as $x => $x_val) {
 		if ($i == $x) {
 			echo $x_val;
