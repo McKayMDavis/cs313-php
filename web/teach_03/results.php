@@ -9,6 +9,7 @@ $name = $_POST["name"];
 $email = $_POST["email"];
 $major = $_POST["major"];
 $comments = $_POST["comments"];
+$continents = $_POST["country"];
 ?>
 
 Name: <?php echo $name;?>
@@ -18,5 +19,12 @@ Email: <a href= <?php echo "mailto:" . $email;?> > <?php echo $email; ?> </a>
 Major: <?php echo $major;?>
 <br>
 Comments: <?php echo $comments;?>
+<br>
+Continents:
+<?php
+foreach ($continents as $continent) {
+	echo "$continent <br>";
+}
+?>
 </body>
 </html>
