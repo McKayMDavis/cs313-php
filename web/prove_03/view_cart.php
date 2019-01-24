@@ -1,3 +1,7 @@
+<?php 
+session_start();
+$items = $_SESSION['items']
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +20,10 @@
 	require('./header.php');
 	?>
 	</div>
-	
+	<?php
+	for ($items as $i) {
+		echo $i . "<br>"
+	}
+	?>
 </body>
 </html>
