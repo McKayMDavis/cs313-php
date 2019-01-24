@@ -17,19 +17,21 @@
 	</div>
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-sm-2">
+			<div class="col-sm-3">
 				<button class="add">Item1</button>
 			</div>
-			<div class="col-sm-2">
+			<div class="col-sm-3">
 				<button class="add">Item2</button>
 			</div>
-			<div class="col-sm-2">
+			<div class="col-sm-3">
 				<button class="add">Item3</button>
 			</div>
-			<div class="col-sm-2">
+			<div class="col-sm-3">
 				<button class="add">Item4</button>
 			</div>
-			<div class="col-sm-2">
+		</div>
+		<div class="row">
+			<div class="col-sm-3">
 				<button class="add">Item5</button>
 			</div>
 		</div>

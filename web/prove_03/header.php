@@ -29,8 +29,7 @@ echo "
 		</div>
 		<div class='collapse navbar-collapse' id='myNavbar'>
 			<ul class='nav navbar-nav'>
-				<li class=$items><a href='./items.php'>Browse</a></li>
-				<li class=$checkout><a href='./checkout.php'>Checkout</a></li>
+				<li class=$items><a href='./items.php'>All Items</a></li>
 			</ul>
 			<ul class='nav navbar-nav navbar-right'>
 				<li class=$cart><a href='./view_cart.php'><span class='glyphicon glyphicon-shopping-cart'></span> $cartSize</a></li>
