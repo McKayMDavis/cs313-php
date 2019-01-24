@@ -17,7 +17,7 @@
 	</div>
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-sm-3 text-center">
+			<div class="col-sm-3 mx-auto">
 				<div class="card" style="width: 18rem;">
 					<img class="card-img-top" src="..." alt="Card image cap">
 					<div class="card-body">
@@ -27,20 +27,48 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-3 text-center">
-				<button class="add">Item2</button>
+			<div class="col-sm-3">
+				<div class="card" style="width: 18rem;">
+					<img class="card-img-top" src="..." alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">Card title</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<a href="#" class="btn btn-primary">Go somewhere</a>
+					</div>
+				</div>
 			</div>
-			<div class="col-sm-3 text-center">
-				<button class="add">Item3</button>
+			<div class="col-sm-3">
+				<div class="card" style="width: 18rem;">
+					<img class="card-img-top" src="..." alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">Card title</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<a href="#" class="btn btn-primary">Go somewhere</a>
+					</div>
+				</div>
 			</div>
-			<div class="col-sm-3 text-center">
-				<button class="add">Item4</button>
+			<div class="col-sm-3">
+				<div class="card" style="width: 18rem;">
+					<img class="card-img-top" src="..." alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">Card title</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<a href="#" class="btn btn-primary">Go somewhere</a>
+					</div>
+				</div>
 			</div>
 		</div>
 		<br>
 		<div class="row">
-			<div class="col-sm-3 text-center">
-				<button class="add">Item5</button>
+			<div class="col-sm-3">
+				<div class="card" style="width: 18rem;">
+					<img class="card-img-top" src="..." alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">Card title</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<a href="#" class="btn btn-primary">Go somewhere</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
