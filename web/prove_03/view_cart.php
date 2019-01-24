@@ -14,16 +14,19 @@ $items = $_SESSION['items'];
   	<link rel="stylesheet" type="text/css" href="custom.css">
 </head>
 <body>
-	<header><h1>Shopping</h1></header>
 	<div id="nav">
-	<?php
-	require('./header.php');
-	?>
+		<?php
+		require('./header.php');
+		?>
 	</div>
-	<?php
-	foreach ($items as $i) {
-		echo $i . "<br>";
-	}
-	?>
+	<div class="container-fluid">
+		<h3>Cart</h3>
+		<?php
+		foreach ($items as $i) {
+			echo $i . "<br>";
+		}
+		?>
+		<a href="./checkout.php">Checkout</a>
+	</div>
 </body>
 </html>

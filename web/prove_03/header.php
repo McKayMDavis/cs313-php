@@ -17,6 +17,7 @@ if ($current == "items.php" || $current == "header.php") {
 }
 
 echo "
+<header><h1>Shopping</h1></header>
 <nav class='navbar navbar-inverse'>
 	<div class='container-fluid'>
 		<div class='navbar-header'>

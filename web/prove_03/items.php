@@ -10,11 +10,10 @@
   	<link rel="stylesheet" type="text/css" href="custom.css">
 </head>
 <body>
-	<header><h1>Shopping</h1></header>
 	<div id="nav">
-	<?php
-	require('./header.php');
-	?>
+		<?php
+		require('./header.php');
+		?>
 	</div>
 	<div class="container-fluid">
 		<div class="row">
