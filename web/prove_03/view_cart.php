@@ -21,7 +21,7 @@ $items = $_SESSION['items'];
 	?>
 	</div>
 	<?php
-	for ($items as $i) {
+	foreach ($items as $i) {
 		echo $i . "<br>";
 	}
 	?>
