@@ -17,25 +17,25 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-2">
-				<button id="add" name="item1">Item1</button>
+				<button class="add" name="item1">Item1</button>
 			</div>
 			<div class="col-sm-2">
-				<button id="add">Item2</button>
+				<button class="add">Item2</button>
 			</div>
 			<div class="col-sm-2">
-				<button id="add">Item3</button>
+				<button class="add">Item3</button>
 			</div>
 			<div class="col-sm-2">
-				<button id="add">Item4</button>
+				<button class="add">Item4</button>
 			</div>
 			<div class="col-sm-2">
-				<button id="add">Item5</button>
+				<button class="add">Item5</button>
 			</div>
 		</div>
 	</div>
 	<script type="text/javascript">
 		$(function(){
-			$('#add').click(function (event) {
+			$('.add').click(function (event) {
 				$.post( "add_item.php", { item: this.innerHTML }, function( data ) {
 					console.log( data.item );
 					console.log( data.success );
