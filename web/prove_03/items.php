@@ -45,12 +45,10 @@
 					if (data.success == "true") {
 						alert("Successfully added " + data.item + " to cart!")
 						$.ajax({ url: 'header.php',
-						         data: {whichTab: 'tab1'},
-						         type: 'post',
 						         success: function(output) {
 						                     $('#nav').html(output);
-						                    }
-						    });
+						                  }
+						});
 					} else {
 						alert("Something went wrong. Please try again.")
 					}
