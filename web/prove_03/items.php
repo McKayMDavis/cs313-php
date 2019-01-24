@@ -17,7 +17,7 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-2">
-				<button class="add" name="item1">Item1</button>
+				<button class="add">Item1</button>
 			</div>
 			<div class="col-sm-2">
 				<button class="add">Item2</button>
@@ -40,6 +40,11 @@
 					console.log( data.item );
 					console.log( data.success );
 					console.log( data.cartSize );
+					if (data.success == "true") {
+						alert("Successfully added" + data.item + "to cart!")
+					} else {
+						alert("Something went wrong. Please try again.")
+					}
 				}, "json");
 			});
 		});
