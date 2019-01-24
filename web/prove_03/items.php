@@ -11,9 +11,11 @@
 </head>
 <body>
 	<header><h1>Shopping</h1></header>
+	<div id="nav">
 	<?php
 	require('./header.php');
 	?>
+	</div>
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-2">
@@ -42,7 +44,13 @@
 					console.log( data.cartSize );
 					if (data.success == "true") {
 						alert("Successfully added " + data.item + " to cart!")
-						$.ajax("./header.php");
+						$.ajax({ url: 'header.php',
+						         data: {whichTab: 'tab1'},
+						         type: 'post',
+						         success: function(output) {
+						                     $('#nav').html(output);
+						                    }
+						    });
 					} else {
 						alert("Something went wrong. Please try again.")
 					}
