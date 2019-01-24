@@ -1,6 +1,7 @@
 <?php
 session_start();
 $current = basename($_SERVER['PHP_SELF']);
+echo $current;
 if (!isset($_SESSION['cartSize'])) {
 	$cartSize = 0;
 } else {

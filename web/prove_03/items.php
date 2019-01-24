@@ -36,6 +36,7 @@
 		</div>
 	</div>
 	<script type="text/javascript">
+		//call function on class 'add' button click to add stuff to the cart
 		$(function(){
 			$('.add').click(function (event) {
 				$.post( "./add_item.php", { item: this.innerHTML }, function( data ) {
@@ -44,6 +45,7 @@
 					console.log( data.cartSize );
 					if (data.success == "true") {
 						alert("Successfully added " + data.item + " to cart!")
+						//reload the header.... There is an error where php no longer knows what page we are on. We could probably use sessions to store the current page.
 						$.ajax({ url: 'header.php',
 						         success: function(output) {
 						                     $('#nav').html(output);
