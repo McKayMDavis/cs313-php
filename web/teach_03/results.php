@@ -32,7 +32,7 @@ Continents:
 foreach ($conts as $i) {
 	foreach($continents as $x => $x_val) {
 		if ($i == $x) {
-			echo $x_val;
+			echo $x_val . "<br>";
 		}
 	}
 }

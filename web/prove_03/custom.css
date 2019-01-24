@@ -1,0 +1,16 @@
+* {
+  -webkit-border-radius: 0 !important;
+     -moz-border-radius: 0 !important;
+          border-radius: 0 !important;
+}
+
+header {
+	padding: 40px;
+	background-color: #41e0d8;
+	color: white;
+	text-align: center;
+}
+
+.img-width {
+	 width: 100%;
+}
