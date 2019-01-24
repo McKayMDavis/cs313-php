@@ -36,13 +36,13 @@
 	<script type="text/javascript">
 		$(function(){
 			$('.add').click(function (event) {
-				$.post( "add_item.php", { item: this.innerHTML }, function( data ) {
+				$.post( "./add_item.php", { item: this.innerHTML }, function( data ) {
 					console.log( data.item );
 					console.log( data.success );
 					console.log( data.cartSize );
 					if (data.success == "true") {
 						alert("Successfully added " + data.item + " to cart!")
-						<?php require('./header.php') ?>
+						$.ajax("./header.php");
 					} else {
 						alert("Something went wrong. Please try again.")
 					}
