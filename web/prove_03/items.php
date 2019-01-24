@@ -17,7 +17,7 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-2">
-				<button id="add">Item1</button>
+				<button id="add" name="item1">Item1</button>
 			</div>
 			<div class="col-sm-2">
 				<button id="add">Item2</button>
@@ -36,7 +36,7 @@
 	<script type="text/javascript">
 		$(function(){
 			$('#add').click(function (event) {
-				$.post( "add_item.php", { item: this.innerhtml }, function( data ) {
+				$.post( "add_item.php", { item: this.innerHTML }, function( data ) {
 					console.log( data.item );
 					console.log( data.success );
 					console.log( data.cartSize );
