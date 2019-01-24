@@ -42,6 +42,7 @@
 					console.log( data.cartSize );
 					if (data.success == "true") {
 						alert("Successfully added " + data.item + " to cart!")
+						<?php require('./header.php') ?>
 					} else {
 						alert("Something went wrong. Please try again.")
 					}
