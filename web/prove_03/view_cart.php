@@ -1,6 +1,6 @@
 <?php 
 session_start();
-$items = $_SESSION['items']
+$items = $_SESSION['items'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
