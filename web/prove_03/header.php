@@ -8,7 +8,7 @@ if (!isset($_SESSION['cartSize'])) {
 	$cartSize = $_SESSION['cartSize'];
 }
 
-if ($current == "items.php") {
+if ($current == "items.php" || $current == "header.php") {
 	$items = 'active';
 } elseif ($current == "view_cart.php") {
 	$cart = 'active';
