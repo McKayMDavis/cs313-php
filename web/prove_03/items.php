@@ -41,7 +41,7 @@
 					console.log( data.success );
 					console.log( data.cartSize );
 					if (data.success == "true") {
-						alert("Successfully added" + data.item + "to cart!")
+						alert("Successfully added " + data.item + " to cart!")
 					} else {
 						alert("Something went wrong. Please try again.")
 					}
