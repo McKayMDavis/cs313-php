@@ -17,8 +17,8 @@
 	</div>
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-sm-3 mx-auto">
-				<div class="card" style="width: 18rem;">
+			<div class="col-sm-3">
+				<div class="card mx-auto" style="width: 18rem;">
 					<img class="card-img-top" src="..." alt="Card image cap">
 					<div class="card-body">
 						<h5 class="card-title">Card title</h5>
