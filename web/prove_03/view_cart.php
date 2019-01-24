@@ -22,7 +22,7 @@ $items = $_SESSION['items']
 	</div>
 	<?php
 	for ($items as $i) {
-		echo $i . "<br>"
+		echo $i . "<br>";
 	}
 	?>
 </body>
