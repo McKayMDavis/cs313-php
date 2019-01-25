@@ -3,7 +3,7 @@ session_start();
 if (!isset($_SESSION['items'])) {
 	$_SESSION['items'] = array();
 }
-$item = htmlspecialchars($_POST['item']);
+$item = $_POST['item'];
 
 if ($item != "Remove Item") {
 	$_SESSION['items'][] = $item;
