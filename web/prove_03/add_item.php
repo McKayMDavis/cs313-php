@@ -8,7 +8,7 @@ $item = htmlspecialchars($_POST['item']);
 if ($item != "Remove Item") {
 	$_SESSION['items'][] = $item;
 } else {
-	$_SESSION['items'] = array_diff($_SESSION['items'], [$item]);
+	$_SESSION['items'] = array_diff($_SESSION['items'], $item);
 
 }
 
