@@ -21,11 +21,13 @@ $items = $_SESSION['items'];
 	</div>
 	<div class="container-fluid">
 		<h3>Cart</h3>
-		<?php
-		foreach ($items as $i) {
-			echo $i . "<button class='remove'>Remove Item</button><br>";
-		}
-		?>
+		<div id="cart">
+			<?php
+			foreach ($items as $i) {
+				echo $i . "<button class='remove'>Remove Item</button><br>";
+			}
+			?>
+		</div>
 		<a href="./checkout.php">Checkout</a>
 	</div>
 	<script type="text/javascript">
@@ -37,7 +39,12 @@ $items = $_SESSION['items'];
 					console.log( data.cartSize );
 					if (data.success == "true") {
 						alert("Successfully removed " + data.item + " from cart!")
-						//reload the header.... There is an error where php no longer knows what page we are on. We could probably use sessions to store the current page.
+						$('#cart').innerHTML = '';
+						$('#cart').html('			<?php
+			foreach ($items as $i) {
+				echo $i . "<button class='remove'>Remove Item</button><br>";
+			}
+			?>')
 						$.ajax({ url: 'header.php',
 						         success: function(output) {
 						                     $('#nav').html(output);
