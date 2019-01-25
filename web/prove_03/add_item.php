@@ -5,9 +5,10 @@ if (!isset($_SESSION['items'])) {
 }
 $item = htmlspecialchars($_POST['item']);
 
-if ($item != "Remove Item") {
-	$_SESSION['items'][] = $item;
+if (strpos($item, "Remove") === false) {
+	$_SESSION['items'][$item] = $item;
 } else {
+	$item = str_replace("Remove ", "", $item)
 	$_SESSION['items'] = array_diff($_SESSION['items'], $item);
 
 }
