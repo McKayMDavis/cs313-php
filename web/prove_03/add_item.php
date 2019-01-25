@@ -3,12 +3,12 @@ session_start();
 if (!isset($_SESSION['items'])) {
 	$_SESSION['items'] = array();
 }
-$item = $_POST['item'];
+$item = htmlspecialchars($_POST['item']);
 
 if ($item != "Remove Item") {
 	$_SESSION['items'][] = $item;
 } else {
-	$_SESSION['items'] = array_diff($_SESSION['items'], [$item])
+	$_SESSION['items'] = array_diff($_SESSION['items'], [$item]);
 
 }
 
