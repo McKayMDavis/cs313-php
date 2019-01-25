@@ -9,7 +9,7 @@ if (strpos($item, "Remove") === false) {
 	$_SESSION['items'][$item] = $item;
 } else {
 	str_replace("Remove ", "", $item);
-	$_SESSION['items'] = array_diff($_SESSION['items'], $item);
+	unset($_SESSION['items'][$item]);
 
 }
 
