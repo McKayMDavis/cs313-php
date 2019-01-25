@@ -18,7 +18,7 @@
 	<div class="container-fluid">
 		<h3>Cart</h3>
 		<div id="cart">
-			<?php require "cart_contents.php"?>
+			<?php require './cart_contents.php'?>
 		</div>
 		<a href="./checkout.php">Checkout</a>
 	</div>
