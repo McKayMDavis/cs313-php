@@ -1,7 +1,3 @@
-<?php 
-session_start();
-$items = $_SESSION['items'];
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,11 +18,7 @@ $items = $_SESSION['items'];
 	<div class="container-fluid">
 		<h3>Cart</h3>
 		<div id="cart">
-			<?php
-			foreach ($items as $i) {
-				echo $i . "<button class='remove'>Remove Item</button><br>";
-			}
-			?>
+			<?php require "cart_contents.php"?>
 		</div>
 		<a href="./checkout.php">Checkout</a>
 	</div>
@@ -39,17 +31,16 @@ $items = $_SESSION['items'];
 					console.log( data.cartSize );
 					if (data.success == "true") {
 						alert("Successfully removed " + data.item + " from cart!")
-						$('#cart').innerHTML = '';
-						$('#cart').html('			<?php
-			foreach ($items as $i) {
-				echo $i . "<button class='remove'>Remove Item</button><br>";
-			}
-			?>')
 						$.ajax({ url: 'header.php',
 						         success: function(output) {
 						                     $('#nav').html(output);
 						                  }
 						});
+						$.ajax({ url: 'cart_contents.php',
+						         success: function(output) {
+						                     $('#cart').html(output);
+						                  }
+						});						
 					} else {
 						alert("Something went wrong. Please try again.")
 					}
