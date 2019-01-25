@@ -8,7 +8,7 @@ $item = htmlspecialchars($_POST['item']);
 if (strpos($item, "Remove") === false) {
 	$_SESSION['items'][$item] = $item;
 } else {
-	str_replace("Remove ", "", $item);
+	$item = str_replace("Remove ", "", $item);
 	unset($_SESSION['items'][$item]);
 
 }
