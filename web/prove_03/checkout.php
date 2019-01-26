@@ -52,28 +52,28 @@ $prices = $_SESSION['prices'];
 			<form action="./thanks.php" method="post">
 				<div class="form-group"> <!-- Full Name -->
 					<label for="full_name_id" class="control-label">Full Name</label>
-					<input type="text" class="form-control" id="full_name_id" name="full_name" placeholder="B.B. King">
+					<input required="required" type="text" class="form-control" id="full_name_id" name="full_name" placeholder="B.B. King">
 				</div>	
 
 				<div class="form-group"> <!-- Street 1 -->
 					<label for="street1_id" class="control-label">Street Address 1</label>
-					<input type="text" class="form-control" id="street1_id" name="street1" placeholder="Street address, P.O. box, company name, c/o">
+					<input required="required" type="text" class="form-control" id="street1_id" name="street1" placeholder="Street address, P.O. box, company name, c/o">
 				</div>					
 										
 				<div class="form-group"> <!-- Street 2 -->
 					<label for="street2_id" class="control-label">Street Address 2</label>
-					<input type="text" class="form-control" id="street2_id" name="street2" placeholder="Apartment, suite, unit, building, floor, etc.">
+					<input required="required" type="text" class="form-control" id="street2_id" name="street2" placeholder="Apartment, suite, unit, building, floor, etc.">
 				</div>	
 
 				<div class="form-group"> <!-- City-->
 					<label for="city_id" class="control-label">City</label>
-					<input type="text" class="form-control" id="city_id" name="city" placeholder="City">
+					<input required="required" type="text" class="form-control" id="city_id" name="city" placeholder="City">
 				</div>									
 										
 				<div class="form-group"> <!-- State Button -->
 					<label for="state_id" class="control-label">State</label>
 					<select class="form-control" id="state_id">
-						<option value="AL">Alabama</option>
+						<option value="AL" selected="selected">Alabama</option>
 						<option value="AK">Alaska</option>
 						<option value="AZ">Arizona</option>
 						<option value="AR">Arkansas</option>
@@ -129,7 +129,7 @@ $prices = $_SESSION['prices'];
 				
 				<div class="form-group"> <!-- Zip Code-->
 					<label for="zip_id" class="control-label">Zip Code</label>
-					<input type="text" class="form-control" id="zip_id" name="zip" placeholder="#####">
+					<input required="required" type="text" class="form-control" id="zip_id" name="zip" placeholder="#####">
 				</div>
 
 				<div class="form-group"> <!-- Submit Button -->
