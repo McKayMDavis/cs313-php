@@ -23,14 +23,19 @@ $prices = $_SESSION['prices'];
 	<div class="container-fluid">
 		<h3>Cart</h3>
 		<div id="cart">
-			<table class="table-responsive, table-hover">
-				<thead>
-					<tr>
-						<th>Item</th>
-						<th>Price</th>
-						<th></th>
-					</tr>
-				</thead>
+			<table class="table-responsive, table-hover" style="width: 100%">
+				<?php
+				if (sizeof($items) > 0) {
+					echo "
+					<thead>
+						<tr>
+							<th>Item</th>
+							<th>Price</th>
+							<th></th>
+						</tr>
+					</thead>";
+				}
+				?>
 				<tbody>
 					<?php
 					foreach ($items as $key=>$i) {

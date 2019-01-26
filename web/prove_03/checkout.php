@@ -25,12 +25,17 @@ $prices = $_SESSION['prices'];
 		<h3>Checkout</h3>
 		<div>
 			<table class="table-responsive, table-hover" style="width: 100%">
-				<thead>
-					<tr>
-						<th>Item</th>
-						<th>Price</th>
-					</tr>
-				</thead>
+				<?php
+				if (sizeof($items) > 0) {
+					echo "
+					<thead>
+						<tr>
+							<th>Item</th>
+							<th>Price</th>
+						</tr>
+					</thead>";
+				}
+				?>
 				<tbody>
 					<?php
 					foreach ($items as $key=>$i) {
