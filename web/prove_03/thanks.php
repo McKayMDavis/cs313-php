@@ -20,6 +20,37 @@ $prices = $_SESSION['prices'];
 		require('./header.php');
 		?>
 	</div>
-	
+	<div class="col-sm-4"></div>
+	<div class="container-fluid col-sm-4">
+		<h3>Order Confirmation</h3>
+		<div>
+			<table class="table-responsive, table-hover" style="width: 100%">
+				<?php
+				if (sizeof($items) > 0) {
+					echo "
+					<thead>
+						<tr>
+							<th>Item</th>
+							<th>Price</th>
+						</tr>
+					</thead>";
+				}
+				?>
+				<tbody>
+					<?php
+					foreach ($items as $key=>$i) {
+						echo "
+						<tr>
+							<td>$i</td>
+							<td>\$$prices[$key]</td>
+						</tr>";
+					}
+					?>
+				</tbody>
+			</table>
+
+
+		</div>
+	</div>
 </body>
 </html>
