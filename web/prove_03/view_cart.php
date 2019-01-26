@@ -23,8 +23,9 @@ $items = $_SESSION['items'];
 		<h3>Cart</h3>
 		<div id="cart">
 			<?php
+			echo $items;
 			foreach ($items as $i) {
-				if ($i == "item") {
+				if ($i === "item") {
 					foreach ($i as $j) {
 						echo $j . "<button class='remove'>Remove $j</button><br>";
 					}
