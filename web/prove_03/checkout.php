@@ -20,7 +20,7 @@ $items = $_SESSION['items'];
 		?>
 	</div>
 	<div class="col-sm-4"></div>
-	<div class="container-fluid col-sm-4">
+	<div class="container-fluid col-sm-4 mb-20">
 		<h3>Checkout</h3>
 		<div id="cart">
 			<table class="table-responsive, table-hover">
@@ -123,7 +123,6 @@ $items = $_SESSION['items'];
 				</div>
 			</form>
 			<a href="./thanks.php">Place Order</a>
-			<br>
 		</div>
 	</div>
 </body>
