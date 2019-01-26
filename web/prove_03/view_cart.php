@@ -36,11 +36,7 @@
 						                     $('#nav').html(output);
 						                  }
 						});
-						$.ajax({ url: 'cart_contents.php',
-						         success: function(output) {
-						                     $('#cart').html(output);
-						                  }
-						});						
+						$.ajax({ url: 'view_cart.php'});						
 					} else {
 						alert("Something went wrong. Please try again.")
 					}
