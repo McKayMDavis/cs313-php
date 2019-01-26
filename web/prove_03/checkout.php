@@ -49,7 +49,7 @@ $prices = $_SESSION['prices'];
 				</tbody>
 			</table>
 			<!--form from w3schools-->
-			<form>
+			<form action="./thanks.php" method="post">
 				<div class="form-group"> <!-- Full Name -->
 					<label for="full_name_id" class="control-label">Full Name</label>
 					<input type="text" class="form-control" id="full_name_id" name="full_name" placeholder="B.B. King">
@@ -131,6 +131,10 @@ $prices = $_SESSION['prices'];
 					<label for="zip_id" class="control-label">Zip Code</label>
 					<input type="text" class="form-control" id="zip_id" name="zip" placeholder="#####">
 				</div>
+
+				<div class="form-group"> <!-- Submit Button -->
+					<button type="submit" class="btn btn-primary">Buy!</button>
+				</div> 
 			</form>
 			<a href="./thanks.php">Place Order</a>
 			<br>
