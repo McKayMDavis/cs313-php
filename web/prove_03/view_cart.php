@@ -32,7 +32,7 @@ $items = $_SESSION['items'];
 		if (sizeof($items) > 0) {
 			echo "<a href='./checkout.php'>Proceed to Checkout</a>";
 		} else {
-			echo "Your cart looks lonely!"
+			echo "Your cart looks lonely!";
 		}
 		?>
 	</div>

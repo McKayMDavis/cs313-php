@@ -123,8 +123,11 @@ $items = $_SESSION['items'];
 					<input type="text" class="form-control" id="zip_id" name="zip" placeholder="#####">
 				</div>
 			</form>
-			<a class="mb-100 pb-100" href="./thanks.php">Place Order</a>
+			<a href="./thanks.php">Place Order</a>
 		</div>
 	</div>
+	<br>
+	<br>
+	<br>
 </body>
 </html>
