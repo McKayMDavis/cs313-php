@@ -82,7 +82,9 @@
 					console.log( data.cartSize );
 					if (data.success == "true") {
 						alert("Successfully added " + data.item + " to cart!")
-						$.ajax({ url: 'items.php'});
+						//reload the header.... There is an error where php no longer knows what page we are on. We could probably use sessions to store the current page.
+						$.ajax({ url: 'items.php'
+						});
 					} else {
 						alert("Something went wrong. Please try again.")
 					}
