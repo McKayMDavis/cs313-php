@@ -4,8 +4,8 @@ if (!isset($_SESSION['items'])) {
 	$_SESSION['items'] = array();
 }
 $input = htmlspecialchars($_POST['item']);
-$item = preg_split(/-, $input)[0];
-$price = preg_split(/-, $input)[1];
+$item = preg_split("/-/", $input)[0];
+$price = preg_split("/-/", $input)[1];
 
 //Just so you know, this forces the user to only be able to purchase one of each item
 //We'll want to make this a dictionary with price and quantity added so that we can display these in the cart and checkout
