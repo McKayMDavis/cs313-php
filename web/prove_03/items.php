@@ -35,7 +35,7 @@
 						<h5 class="card-title">Card title</h5>
 						<h3 class="card-title">Card title</h3>
 						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						<button class="add">Add to Cart</button>
+						<button class="add" id="item2-200">Add to Cart</button>
 					</div>
 				</div>
 			</div>
@@ -46,7 +46,7 @@
 						<h5 class="card-title">Card title</h5>
 						<h3 class="card-title">Card title</h3>
 						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						<button class="add">Add to Cart</button>
+						<button class="add" id="item3-300">Add to Cart</button>
 					</div>
 				</div>
 			</div>
@@ -57,7 +57,7 @@
 						<h5 class="card-title">Card title</h5>
 						<h3 class="card-title">Card title</h3>
 						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						<button class="add">Add to Cart</button>
+						<button class="add" id="item4-400">Add to Cart</button>
 					</div>
 				</div>
 			</div>
@@ -71,7 +71,7 @@
 						<h5 class="card-title">Card title</h5>
 						<h3 class="card-title">Card title</h3>
 						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						<button class="add">Add to Cart</button>
+						<button class="add" id="item5-500">Add to Cart</button>
 					</div>
 				</div>
 			</div>
