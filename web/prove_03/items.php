@@ -21,19 +21,8 @@
 				<div class="card" style="width: 18rem;">
 					<img class="card-img-top" src="..." alt="Card image cap">
 					<div class="card-body">
-						<form method="post">
-							<h5 class="card-title">Card title</h5>
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-							<button type="submit" class="add">Add to Cart1</button>
-						</form>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-3">
-				<div class="card" style="width: 18rem;">
-					<img class="card-img-top" src="..." alt="Card image cap">
-					<div class="card-body">
-						<h5 class="card-title">Card title</h5>
+						<h5 class="card-title" name="item">Item 1</h5>
+						<h3 class="card-title" name="price">100</h3>
 						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 						<button class="add">Add to Cart</button>
 					</div>
@@ -43,7 +32,8 @@
 				<div class="card" style="width: 18rem;">
 					<img class="card-img-top" src="..." alt="Card image cap">
 					<div class="card-body">
-						<h5 class="card-title">Card title</h5>
+						<h5 class="card-title" name="item">Item 2</h5>
+						<h3 class="card-title" name="price">200</h3>
 						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 						<button class="add">Add to Cart</button>
 					</div>
@@ -53,7 +43,19 @@
 				<div class="card" style="width: 18rem;">
 					<img class="card-img-top" src="..." alt="Card image cap">
 					<div class="card-body">
-						<h5 class="card-title">Card title</h5>
+						<h5 class="card-title" name="item">Item 3</h5>
+						<h3 class="card-title" name="price">300</h3>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<button class="add">Add to Cart</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="card" style="width: 18rem;">
+					<img class="card-img-top" src="..." alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title" name="item">Item 4</h5>
+						<h3 class="card-title" name="price">400</h3>
 						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 						<button class="add">Add to Cart</button>
 					</div>
@@ -66,7 +68,8 @@
 				<div class="card" style="width: 18rem;">
 					<img class="card-img-top" src="..." alt="Card image cap">
 					<div class="card-body">
-						<h5 class="card-title">Card title</h5>
+						<h5 class="card-title" name="item">Item 5</h5>
+						<h3 class="card-title" name="price">500</h3>
 						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 						<button class="add">Add to Cart</button>
 					</div>
@@ -78,7 +81,7 @@
 		//call function on class 'add' button click to add stuff to the cart
 		$(function(){
 			$('.add').click(function (event) {
-				$.post( "./add_item.php", { item: this.innerHTML }, function( data ) {
+				$.post( "./add_item.php", { item: this.sibbling('[name="item"]').innerHTML, price: this.sibbling('[name="price"]').innerHTML }, function( data ) {
 					console.log( data.item );
 					console.log( data.success );
 					console.log( data.cartSize );
