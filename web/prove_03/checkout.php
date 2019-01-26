@@ -24,7 +24,7 @@ $prices = $_SESSION['prices'];
 	<div class="container-fluid col-sm-4">
 		<h3>Checkout</h3>
 		<div>
-			<table class="table-responsive, table-hover">
+			<table class="table-responsive, table-hover" style="width: 100%">
 				<thead>
 					<tr>
 						<th>Item</th>
@@ -128,6 +128,7 @@ $prices = $_SESSION['prices'];
 				</div>
 			</form>
 			<a href="./thanks.php">Place Order</a>
+			<br>
 			<a href="./view_cart.php">Return to Cart</a>
 		</div>
 	</div>
