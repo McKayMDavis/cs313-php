@@ -21,9 +21,11 @@
 				<div class="card" style="width: 18rem;">
 					<img class="card-img-top" src="..." alt="Card image cap">
 					<div class="card-body">
-						<h5 class="card-title">Card title</h5>
-						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						<button class="add">Item1</button>
+						<form method="post">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							<button type="submit" class="add">Add to Cart1</button>
+						</form>
 					</div>
 				</div>
 			</div>
@@ -33,7 +35,7 @@
 					<div class="card-body">
 						<h5 class="card-title">Card title</h5>
 						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						<button class="add">Item2</button>
+						<button class="add">Add to Cart</button>
 					</div>
 				</div>
 			</div>
@@ -43,7 +45,7 @@
 					<div class="card-body">
 						<h5 class="card-title">Card title</h5>
 						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						<button class="add">Item3</button>
+						<button class="add">Add to Cart</button>
 					</div>
 				</div>
 			</div>
@@ -53,7 +55,7 @@
 					<div class="card-body">
 						<h5 class="card-title">Card title</h5>
 						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						<button class="add">Item4</button>
+						<button class="add">Add to Cart</button>
 					</div>
 				</div>
 			</div>
@@ -66,7 +68,7 @@
 					<div class="card-body">
 						<h5 class="card-title">Card title</h5>
 						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						<button class="add">Item5</button>
+						<button class="add">Add to Cart</button>
 					</div>
 				</div>
 			</div>

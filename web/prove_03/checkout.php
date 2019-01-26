@@ -43,7 +43,7 @@ $items = $_SESSION['items'];
 			<form>
 				<div class="form-group"> <!-- Full Name -->
 					<label for="full_name_id" class="control-label">Full Name</label>
-					<input type="text" class="form-control" id="full_name_id" name="full_name" placeholder="John Deer">
+					<input type="text" class="form-control" id="full_name_id" name="full_name" placeholder="B.B. King">
 				</div>	
 
 				<div class="form-group"> <!-- Street 1 -->
@@ -58,7 +58,7 @@ $items = $_SESSION['items'];
 
 				<div class="form-group"> <!-- City-->
 					<label for="city_id" class="control-label">City</label>
-					<input type="text" class="form-control" id="city_id" name="city" placeholder="Smallville">
+					<input type="text" class="form-control" id="city_id" name="city" placeholder="City">
 				</div>									
 										
 				<div class="form-group"> <!-- State Button -->
@@ -126,8 +126,5 @@ $items = $_SESSION['items'];
 			<a href="./thanks.php">Place Order</a>
 		</div>
 	</div>
-	<br>
-	<br>
-	<br>
 </body>
 </html>
