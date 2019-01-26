@@ -79,7 +79,7 @@
 	</div>
 	<script type="text/javascript">
 		//call function on class 'add' button click to add stuff to the cart
-		$(function(){
+		$().ready(function(){
 			$('.add').click(function (event) {
 				thiz = this;
 				console.log($('thiz').siblings().first().text());
