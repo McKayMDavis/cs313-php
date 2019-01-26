@@ -81,7 +81,8 @@
 		//call function on class 'add' button click to add stuff to the cart
 		$(function(){
 			$('.add').click(function (event) {
-				$.post( "./add_item.php", { item: this.siblings('[name="item"]').innerHTML, price: this.siblings('[name="price"]').innerHTML }, function( data ) {
+				thiz = this;
+				$.post( "./add_item.php", { item: $('thiz').siblings('[name="item"]').innerHTML, price: $('thiz').siblings('[name="price"]').innerHTML }, function( data ) {
 					console.log( data.item );
 					console.log( data.success );
 					console.log( data.cartSize );
