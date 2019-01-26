@@ -38,7 +38,7 @@ $items = $_SESSION['items'];
 					?>
 				</tbody>
 			</table>
-			<form>
+			<form class="col-sm-4">
 				<div class="form-group"> <!-- Full Name -->
 					<label for="full_name_id" class="control-label">Full Name</label>
 					<input type="text" class="form-control" id="full_name_id" name="full_name" placeholder="John Deer">
@@ -119,11 +119,7 @@ $items = $_SESSION['items'];
 				<div class="form-group"> <!-- Zip Code-->
 					<label for="zip_id" class="control-label">Zip Code</label>
 					<input type="text" class="form-control" id="zip_id" name="zip" placeholder="#####">
-				</div>		
-				
-				<div class="form-group"> <!-- Submit Button -->
-					<button type="submit" class="btn btn-primary">Buy!</button>
-				</div>     
+				</div>
 			</form>
 			<a href="./thanks.php">Place Order</a>
 		</div>
