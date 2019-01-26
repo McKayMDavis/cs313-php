@@ -21,7 +21,7 @@
 				<div class="card" style="width: 18rem;">
 					<img class="card-img-top" src="..." alt="Card image cap">
 					<div class="card-body">
-						<h5 class="card-title" class="item" id="bob">Item1</h5>
+						<h5 class="card-title" class="item">Item1</h5>
 						<h3 class="card-title" class="price">100</h3>
 						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 						<button class="add">Add to Cart</button>
@@ -79,28 +79,22 @@
 	</div>
 	<script type="text/javascript">
 		//call function on class 'add' button click to add stuff to the cart
-		$(function(){
-			$('.add').click(function (event) {
-				thiz = this;
-				console.log($('thiz'));
-				console.log($('#bob').text());
-				$.post( "./add_item.php", { item: $('thiz').siblings('.item').text(), price: $('thiz').siblings('.price').text() }, function( data ) {
-					console.log( data.item );
-					console.log( data.success );
-					console.log( data.cartSize );
-					if (data.success == "true") {
-						alert("Successfully added " + data.item + " to cart!")
-						//Could just change this to location.reload();
-						$.ajax({ url: 'header.php',
-						         success: function(output) {
-						                     $('#nav').html(output);
-						                  }
-						});
-					} else {
-						alert("Something went wrong. Please try again.")
-					}
-				}, "json");
-			});
+		$().ready(function(){
+		    $(".add").click(function() {
+		        var button = this;
+		        $.ajax({
+		            url:  '{site_url}index.php/activate',
+		            type: 'POST', 
+		            dataType: 'html',
+		            data: {
+		                item: $(button).siblings('.item').text(),
+		                idclient: $(button).siblings('.price').text(),
+		            },
+		            success: function(result) {
+		            	console.log(result.item);
+		            }
+		        });
+		    });
 		});
 	</script>
 </body>
