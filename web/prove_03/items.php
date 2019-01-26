@@ -83,7 +83,7 @@
 		    $(".add").click(function() {
 		        var button = this;
 		        $.ajax({
-		            url:  '{site_url}index.php/activate',
+		            url:  './add_item.php',
 		            type: 'POST', 
 		            dataType: 'html',
 		            data: {
