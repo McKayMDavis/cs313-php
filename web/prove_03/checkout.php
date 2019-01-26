@@ -22,7 +22,12 @@ $items = $_SESSION['items'];
 	<div class="container-fluid">
 		<h3>Checkout</h3>
 		<div id="cart">
-			<table>
+			<table class="table-responsive, table-hover">
+				<tr>
+					<th>Item</th>
+					<th>Price</th>
+					<th>Quantity</th>
+				</tr>
 				<?php
 				foreach ($items as $i) {
 					echo "<tr><td>$i</td></tr>";
