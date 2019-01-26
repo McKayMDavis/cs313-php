@@ -21,7 +21,7 @@
 				<div class="card" style="width: 18rem;">
 					<img class="card-img-top" src="..." alt="Card image cap">
 					<div class="card-body">
-						<h5 class="card-title" class="item">Item 1</h5>
+						<h5 class="card-title" class="item">Item1</h5>
 						<h3 class="card-title" class="price">100</h3>
 						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 						<button class="add">Add to Cart</button>
@@ -32,7 +32,7 @@
 				<div class="card" style="width: 18rem;">
 					<img class="card-img-top" src="..." alt="Card image cap">
 					<div class="card-body">
-						<h5 class="card-title" class="item">Item 2</h5>
+						<h5 class="card-title" class="item">Item2</h5>
 						<h3 class="card-title" class="price">200</h3>
 						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 						<button class="add">Add to Cart</button>
@@ -43,7 +43,7 @@
 				<div class="card" style="width: 18rem;">
 					<img class="card-img-top" src="..." alt="Card image cap">
 					<div class="card-body">
-						<h5 class="card-title" class="item">Item 3</h5>
+						<h5 class="card-title" class="item">Item3</h5>
 						<h3 class="card-title" class="price">300</h3>
 						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 						<button class="add">Add to Cart</button>
@@ -54,7 +54,7 @@
 				<div class="card" style="width: 18rem;">
 					<img class="card-img-top" src="..." alt="Card image cap">
 					<div class="card-body">
-						<h5 class="card-title" class="item">Item 4</h5>
+						<h5 class="card-title" class="item">Item4</h5>
 						<h3 class="card-title" class="price">400</h3>
 						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 						<button class="add">Add to Cart</button>
@@ -68,7 +68,7 @@
 				<div class="card" style="width: 18rem;">
 					<img class="card-img-top" src="..." alt="Card image cap">
 					<div class="card-body">
-						<h5 class="card-title" class="item">Item 5</h5>
+						<h5 class="card-title" class="item">Item5</h5>
 						<h3 class="card-title" class="price">500</h3>
 						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 						<button class="add">Add to Cart</button>
@@ -82,7 +82,7 @@
 		$(function(){
 			$('.add').click(function (event) {
 				thiz = this;
-				$.post( "./add_item.php", { item: $('thiz').siblings('.item').attr('class'), price: $('thiz').siblings('.price').innerHTML }, function( data ) {
+				$.post( "./add_item.php", { item: $('thiz').siblings('.item').innerHTML, price: $('thiz').siblings('.price').innerHTML }, function( data ) {
 					console.log( data.item );
 					console.log( data.success );
 					console.log( data.cartSize );
