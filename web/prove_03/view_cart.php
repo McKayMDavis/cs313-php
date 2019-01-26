@@ -31,16 +31,7 @@
 					console.log( data.cartSize );
 					if (data.success == "true") {
 						alert("Successfully removed " + data.item + " from cart!")
-						$.ajax({ url: 'header.php',
-						         success: function(output) {
-						                     $('#nav').html(output);
-						                  }
-						});
-						$.ajax({ url: 'cart_contents.php',
-						         success: function(output) {
-						                     $('#cart').html(output);
-						                  }
-						});						
+						location.reload();						
 					} else {
 						alert("Something went wrong. Please try again.")
 					}
