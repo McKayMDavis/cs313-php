@@ -20,7 +20,7 @@ $items = $_SESSION['items'];
 		?>
 	</div>
 	<div class="col-sm-4"></div>
-	<div class="container-fluid col-sm-4 pb-20">
+	<div class="container-fluid col-sm-4">
 		<h3>Checkout</h3>
 		<div id="cart">
 			<table class="table-responsive, table-hover">
@@ -123,7 +123,7 @@ $items = $_SESSION['items'];
 					<input type="text" class="form-control" id="zip_id" name="zip" placeholder="#####">
 				</div>
 			</form>
-			<a href="./thanks.php">Place Order</a>
+			<a class="mb-100 pb-100" href="./thanks.php">Place Order</a>
 		</div>
 	</div>
 </body>
