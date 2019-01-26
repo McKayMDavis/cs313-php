@@ -28,7 +28,13 @@ $items = $_SESSION['items'];
 			}
 			?>
 		</div>
-		<a href="./checkout.php">Proceed to Checkout</a>
+		<?php
+		if (sizeof($items) > 0) {
+			echo "<a href='./checkout.php'>Proceed to Checkout</a>";
+		} else {
+			echo "Your cart looks lonely!"
+		}
+		?>
 	</div>
 	<script type="text/javascript">
 		$(function(){
