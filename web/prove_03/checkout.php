@@ -22,13 +22,12 @@ $items = $_SESSION['items'];
 	<div class="col-sm-4"></div>
 	<div class="container-fluid col-sm-4">
 		<h3>Checkout</h3>
-		<div id="cart">
+		<div>
 			<table class="table-responsive, table-hover">
 				<thead>
 					<tr>
 						<th>Item</th>
 						<th>Price</th>
-						<th>Quantity</th>
 					</tr>
 				</thead>
 				<tbody>

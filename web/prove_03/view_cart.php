@@ -1,6 +1,7 @@
 <?php
 session_start();
 $items = $_SESSION['items'];
+$prices = $_SESSION['prices'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,16 +23,27 @@ $items = $_SESSION['items'];
 	<div class="container-fluid">
 		<h3>Cart</h3>
 		<div id="cart">
-			<?php
-			echo $items;
-			foreach ($items as $i) {
-				if ($i === "item") {
-					foreach ($i as $j) {
-						echo $j . "<button class='remove'>Remove $j</button><br>";
+			<table class="table-responsive, table-hover">
+				<thead>
+					<tr>
+						<th>Item</th>
+						<th>Price</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<?php
+					foreach ($items as $key=>$i) {
+						echo "
+						<tr>
+							<td>$i</td>
+							<td>$prices[$key]</td>
+							<td><button class='remove'>Remove $i</button><br></td>
+						</tr>";
 					}
-				}
-			}
-			?>
+					?>
+				</tbody>
+			</table>
 		</div>
 		<?php
 		if (sizeof($items) > 0) {
