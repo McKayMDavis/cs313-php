@@ -53,3 +53,7 @@ $prices = $_SESSION['prices'];
 			<?php
 			echo "$_POST['full-name']";
 			?>
+		</div>
+	</div>
+</body>
+</html>
