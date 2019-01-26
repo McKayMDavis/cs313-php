@@ -21,8 +21,19 @@
 				<div class="card" style="width: 18rem;">
 					<img class="card-img-top" src="..." alt="Card image cap">
 					<div class="card-body">
-						<h5 class="card-title" class="item">Item1</h5>
-						<h3 class="card-title" class="price">100</h3>
+						<h5 class="card-title">Card title</h5>
+						<h3 class="card-title">Card title</h3>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<button class="add" id="item1-100">Add to Cart</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="card" style="width: 18rem;">
+					<img class="card-img-top" src="..." alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">Card title</h5>
+						<h3 class="card-title">Card title</h3>
 						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 						<button class="add">Add to Cart</button>
 					</div>
@@ -32,8 +43,8 @@
 				<div class="card" style="width: 18rem;">
 					<img class="card-img-top" src="..." alt="Card image cap">
 					<div class="card-body">
-						<h5 class="card-title" class="item">Item2</h5>
-						<h3 class="card-title" class="price">200</h3>
+						<h5 class="card-title">Card title</h5>
+						<h3 class="card-title">Card title</h3>
 						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 						<button class="add">Add to Cart</button>
 					</div>
@@ -43,19 +54,8 @@
 				<div class="card" style="width: 18rem;">
 					<img class="card-img-top" src="..." alt="Card image cap">
 					<div class="card-body">
-						<h5 class="card-title" class="item">Item3</h5>
-						<h3 class="card-title" class="price">300</h3>
-						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						<button class="add">Add to Cart</button>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-3">
-				<div class="card" style="width: 18rem;">
-					<img class="card-img-top" src="..." alt="Card image cap">
-					<div class="card-body">
-						<h5 class="card-title" class="item">Item4</h5>
-						<h3 class="card-title" class="price">400</h3>
+						<h5 class="card-title">Card title</h5>
+						<h3 class="card-title">Card title</h3>
 						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 						<button class="add">Add to Cart</button>
 					</div>
@@ -68,8 +68,8 @@
 				<div class="card" style="width: 18rem;">
 					<img class="card-img-top" src="..." alt="Card image cap">
 					<div class="card-body">
-						<h5 class="card-title" class="item">Item5</h5>
-						<h3 class="card-title" class="price">500</h3>
+						<h5 class="card-title">Card title</h5>
+						<h3 class="card-title">Card title</h3>
 						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 						<button class="add">Add to Cart</button>
 					</div>
@@ -79,22 +79,25 @@
 	</div>
 	<script type="text/javascript">
 		//call function on class 'add' button click to add stuff to the cart
-		$().ready(function(){
-		    $(".add").click(function() {
-		        var button = this;
-		        $.ajax({
-		            url:  './add_item.php',
-		            type: 'POST', 
-		            dataType: 'html',
-		            data: {
-		                item: $(button).siblings('.item').text(),
-		                idclient: $(button).siblings('.price').text(),
-		            },
-		            success: function(result) {
-		            	console.log(result.item);
-		            }
-		        });
-		    });
+		$(function(){
+			$('.add').click(function (event) {
+				$.post( "./add_item.php", { item: this.getAttribute("id") }, function( data ) {
+					console.log( data.item );
+					console.log( data.success );
+					console.log( data.cartSize );
+					if (data.success == "true") {
+						alert("Successfully added " + data.item + " to cart!")
+						//Could just change this to location.reload();
+						$.ajax({ url: 'header.php',
+						         success: function(output) {
+						                     $('#nav').html(output);
+						                  }
+						});
+					} else {
+						alert("Something went wrong. Please try again.")
+					}
+				}, "json");
+			});
 		});
 	</script>
 </body>
