@@ -82,8 +82,7 @@
 		$(function(){
 			$('.add').click(function (event) {
 				thiz = this;
-				console.log($('thiz').siblings());
-				console.log($('thiz').first());
+				console.log($('thiz'));
 				console.log($('#bob').text());
 				$.post( "./add_item.php", { item: $('thiz').siblings('.item').text(), price: $('thiz').siblings('.price').text() }, function( data ) {
 					console.log( data.item );
