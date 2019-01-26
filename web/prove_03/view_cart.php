@@ -28,7 +28,7 @@ $items = $_SESSION['items'];
 			}
 			?>
 		</div>
-		<a href="./checkout.php">Checkout</a>
+		<a href="./checkout.php">Proceed to Checkout</a>
 	</div>
 	<script type="text/javascript">
 		$(function(){
