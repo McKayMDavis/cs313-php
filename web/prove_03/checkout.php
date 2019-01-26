@@ -19,7 +19,7 @@ $items = $_SESSION['items'];
 		require('./header.php');
 		?>
 	</div>
-	<div class="container-fluid">
+	<div class="container-fluid col-sm-4">
 		<h3>Checkout</h3>
 		<div id="cart">
 			<table class="table-responsive, table-hover">
@@ -38,7 +38,7 @@ $items = $_SESSION['items'];
 					?>
 				</tbody>
 			</table>
-			<form class="col-sm-4">
+			<form>
 				<div class="form-group"> <!-- Full Name -->
 					<label for="full_name_id" class="control-label">Full Name</label>
 					<input type="text" class="form-control" id="full_name_id" name="full_name" placeholder="John Deer">
