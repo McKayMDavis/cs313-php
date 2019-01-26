@@ -83,9 +83,9 @@
 					if (data.success == "true") {
 						alert("Successfully added " + data.item + " to cart!")
 						//reload the header.... There is an error where php no longer knows what page we are on. We could probably use sessions to store the current page.
-						$.ajax({ url: 'header.php',
-						         success: function(output) {
-						                     $('#nav').html(output);
+						$.ajax({ url: 'items.php',
+						         success: function() {
+						                     location.reload();
 						                  }
 						});
 					} else {
