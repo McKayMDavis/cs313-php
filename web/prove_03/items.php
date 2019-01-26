@@ -82,7 +82,7 @@
 		$(function(){
 			$('.add').click(function (event) {
 				var thiz = this;
-				$.post( "./add_item.php", { item: this.sibblings('[name="item"]').innerHTML, price: this.sibblings('[name="price"]').innerHTML }, function( data ) {
+				$.post( "./add_item.php", { item: thiz.sibblings('[name="item"]').innerHTML, price: thiz.sibblings('[name="price"]').innerHTML }, function( data ) {
 					console.log( data.item );
 					console.log( data.success );
 					console.log( data.cartSize );
