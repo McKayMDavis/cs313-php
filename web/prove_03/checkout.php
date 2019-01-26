@@ -128,6 +128,7 @@ $prices = $_SESSION['prices'];
 				</div>
 			</form>
 			<a href="./thanks.php">Place Order</a>
+			<a href="./view_cart.php">Return to Cart</a>
 		</div>
 	</div>
 </body>

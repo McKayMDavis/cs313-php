@@ -18,6 +18,7 @@ if (strpos($item, "Remove") === false) {
 } else {
 	$item = str_replace("Remove ", "", $item);
 	unset($_SESSION['items'][$item]);
+	unset($_SESSION['prices'][$item]);
 
 }
 
