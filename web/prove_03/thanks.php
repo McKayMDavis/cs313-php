@@ -50,7 +50,7 @@ $prices = $_SESSION['prices'];
 			</table>
 			<h4>Shipping information</h4>
 			<?php
-			$name = $_POST['full-name']
+			$name = $_POST['full-name'];
 			echo "$name";
 			?>
 		</div>
