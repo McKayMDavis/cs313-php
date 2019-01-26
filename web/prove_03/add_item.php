@@ -18,5 +18,5 @@ if (strpos($item, "Remove") === false) {
 $_SESSION['cartSize'] = sizeof($_SESSION['items']);
 $json = array('item'=>$item, 'success'=>'true', 'cartSize'=>$_SESSION['cartSize']);
 header('Content-type: application/json');
-echo json_encode($$_POST['item']);
+echo json_encode($json);
 ?>
