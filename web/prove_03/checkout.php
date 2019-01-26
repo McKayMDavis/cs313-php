@@ -1,6 +1,7 @@
 <?php 
 session_start();
 $items = $_SESSION['items'];
+$prices = $_SESSION['prices'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,8 +33,12 @@ $items = $_SESSION['items'];
 				</thead>
 				<tbody>
 					<?php
-					foreach ($items as $i) {
-						echo "<tr><td>$i</td></tr>";
+					foreach ($items as $key=>$i) {
+						echo "
+						<tr>
+							<td>$i</td>
+							<td>\$$prices[$key]</td>
+						</tr>";
 					}
 					?>
 				</tbody>

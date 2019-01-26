@@ -37,7 +37,7 @@ $prices = $_SESSION['prices'];
 						echo "
 						<tr>
 							<td>$i</td>
-							<td>$prices[$key]</td>
+							<td>\$$prices[$key]</td>
 							<td><button class='remove'>Remove $i</button><br></td>
 						</tr>";
 					}
