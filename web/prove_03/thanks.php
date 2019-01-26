@@ -48,8 +48,10 @@ $prices = $_SESSION['prices'];
 					?>
 				</tbody>
 			</table>
-
-
+			<h4>Shipping information</h4>
+			<?php
+			echo "cool";
+			?>
 		</div>
 	</div>
 </body>
