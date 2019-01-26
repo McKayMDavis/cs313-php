@@ -39,6 +39,7 @@ $items = $_SESSION['items'];
 					?>
 				</tbody>
 			</table>
+			<!--form from w3schools-->
 			<form>
 				<div class="form-group"> <!-- Full Name -->
 					<label for="full_name_id" class="control-label">Full Name</label>
