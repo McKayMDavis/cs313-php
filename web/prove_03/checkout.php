@@ -21,6 +21,15 @@ $items = $_SESSION['items'];
 	</div>
 	<div class="container-fluid">
 		<h3>Checkout</h3>
+		<div id="cart">
+			<table>
+				<?php
+				foreach ($items as $i) {
+					echo "<tr><td>$i</td></tr>";
+				}
+				?>
+			</table>
+		</div>
 	</div>
 </body>
 </html>

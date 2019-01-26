@@ -1,3 +1,7 @@
+<?php
+session_start();
+$items = $_SESSION['items'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +22,11 @@
 	<div class="container-fluid">
 		<h3>Cart</h3>
 		<div id="cart">
-			<?php require './cart_contents.php'?>
+			<?php
+			foreach ($items as $i) {
+				echo $i . "<button class='remove'>Remove $i</button><br>";
+			}
+			?>
 		</div>
 		<a href="./checkout.php">Checkout</a>
 	</div>
