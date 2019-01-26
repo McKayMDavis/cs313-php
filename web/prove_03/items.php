@@ -21,7 +21,7 @@
 				<div class="card" style="width: 18rem;">
 					<img class="card-img-top" src="..." alt="Card image cap">
 					<div class="card-body">
-						<h5 class="card-title" class="item">Item1</h5>
+						<h5 class="card-title" class="item" id="bob">Item1</h5>
 						<h3 class="card-title" class="price">100</h3>
 						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 						<button class="add">Add to Cart</button>
@@ -83,7 +83,7 @@
 			$('.add').click(function (event) {
 				thiz = this;
 				console.log($('thiz').siblings('.item').text());
-				console.log($('.item').text());
+				console.log($('#bob').text());
 				$.post( "./add_item.php", { item: $('thiz').siblings('.item').text(), price: $('thiz').siblings('.price').text() }, function( data ) {
 					console.log( data.item );
 					console.log( data.success );
