@@ -19,7 +19,6 @@
 		<div class="row">
 			<div class="col-sm-3">
 				<div class="card" style="width: 18rem;">
-					<img class="card-img-top" src="..." alt="Card image cap">
 					<div class="card-body">
 						<h5 class="card-title">Item1</h5>
 						<h5 class="card-title">$100</h5>
@@ -29,7 +28,6 @@
 			</div>
 			<div class="col-sm-3">
 				<div class="card" style="width: 18rem;">
-					<img class="card-img-top" src="..." alt="Card image cap">
 					<div class="card-body">
 						<h5 class="card-title">Item2</h5>
 						<h5 class="card-title">$200</h5>
@@ -39,7 +37,6 @@
 			</div>
 			<div class="col-sm-3">
 				<div class="card" style="width: 18rem;">
-					<img class="card-img-top" src="..." alt="Card image cap">
 					<div class="card-body">
 						<h5 class="card-title">Item3</h5>
 						<h5 class="card-title">$300</h5>
@@ -49,7 +46,6 @@
 			</div>
 			<div class="col-sm-3">
 				<div class="card" style="width: 18rem;">
-					<img class="card-img-top" src="..." alt="Card image cap">
 					<div class="card-body">
 						<h5 class="card-title">Item4</h5>
 						<h5 class="card-title">$400</h5>
@@ -62,7 +58,6 @@
 		<div class="row">
 			<div class="col-sm-3">
 				<div class="card" style="width: 18rem;">
-					<img class="card-img-top" src="..." alt="Card image cap">
 					<div class="card-body">
 						<h5 class="card-title">Item5</h5>
 						<h5 class="card-title">$500</h5>

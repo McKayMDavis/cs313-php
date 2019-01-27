@@ -59,6 +59,7 @@ $prices = $_SESSION['prices'];
 			echo htmlspecialchars($_POST['city']) . ", " . htmlspecialchars($_POST['state']) . " " . htmlspecialchars($_POST['zip']);
 			unset($_SESSION['items']);
 			unset($_SESSION['prices']);
+			unset($_SESSION['cartSize']);
 			?>
 		</div>
 	</div>
