@@ -72,7 +72,7 @@ $prices = $_SESSION['prices'];
 										
 				<div class="form-group"> <!-- State Button -->
 					<label for="state_id" class="control-label">State</label>
-					<select class="form-control" id="state_id">
+					<select class="form-control" id="state_id" name="state">
 						<option value="AL" selected="selected">Alabama</option>
 						<option value="AK">Alaska</option>
 						<option value="AZ">Arizona</option>
