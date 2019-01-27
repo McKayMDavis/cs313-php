@@ -6,7 +6,7 @@ $prices = $_SESSION['prices'];
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  	<title>Browse Items</title>
+  	<title>Checkout</title>
   	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -62,7 +62,7 @@ $prices = $_SESSION['prices'];
 										
 				<div class="form-group"> <!-- Street 2 -->
 					<label for="street2_id" class="control-label">Street Address 2</label>
-					<input required="required" type="text" class="form-control" id="street2_id" name="street2" placeholder="Apartment, suite, unit, building, floor, etc.">
+					<input type="text" class="form-control" id="street2_id" name="street2" placeholder="Apartment, suite, unit, building, floor, etc.">
 				</div>	
 
 				<div class="form-group"> <!-- City-->

@@ -14,7 +14,7 @@
 	require 'header.php';
 	?>
 	<div class="container-fluid">
-		<p>Coming Soon!</p>
+		<a href="../prove_03/items.php">Prove 03</a>
 	</div>
 </body>
 </html>
