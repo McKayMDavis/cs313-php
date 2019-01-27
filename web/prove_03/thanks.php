@@ -51,13 +51,12 @@ $prices = $_SESSION['prices'];
 			<h4>Shipping information</h4>
 			<?php
 			echo "<p>";
-			echo $_POST['full_name'];
+			echo htmlspecialchars($_POST['full_name']);
 			echo "</p>";
 			echo "<p>";
-			echo $_POST['street1'] . " " . $_POST['street2'];
+			echo htmlspecialchars($_POST['street1']) . " " . htmlspecialchars($_POST['street2']);
 			echo "</p>";
-			echo $_POST['city'] . ", " . $_POST['state'] . " " . $_POST['zip'];
-			;
+			echo htmlspecialchars($_POST['city']) . ", " . htmlspecialchars($_POST['state']) . " " . htmlspecialchars($_POST['zip']);
 			?>
 		</div>
 	</div>
