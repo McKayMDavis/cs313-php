@@ -58,7 +58,7 @@ $prices = $_SESSION['prices'];
 			echo "<br>";
 			echo $_POST['city'];
 			echo "<br>";
-			echo $_POST['street1'];
+			echo $_POST['state'];
 			echo "<br>";
 			echo $_POST['zip'];
 			?>
