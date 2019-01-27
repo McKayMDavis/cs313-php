@@ -136,7 +136,6 @@ $prices = $_SESSION['prices'];
 					<button type="submit" class="btn btn-primary">Buy!</button>
 				</div> 
 			</form>
-			<a href="./thanks.php">Place Order</a>
 			<br>
 			<a href="./view_cart.php">Return to Cart</a>
 		</div>

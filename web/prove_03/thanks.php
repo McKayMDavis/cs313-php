@@ -50,17 +50,14 @@ $prices = $_SESSION['prices'];
 			</table>
 			<h4>Shipping information</h4>
 			<?php
+			echo "<p>";
 			echo $_POST['full_name'];
-			echo "<br>";
-			echo $_POST['street1'];
-			echo "<br>";
-			echo $_POST['street2'];
-			echo "<br>";
-			echo $_POST['city'];
-			echo "<br>";
-			echo $_POST['state'];
-			echo "<br>";
-			echo $_POST['zip'];
+			echo "</p>";
+			echo "<p>";
+			echo $_POST['street1'] . " " . $_POST['street2'];
+			echo "</p>";
+			echo $_POST['city'] . ", " . $_POST['state'] . " " . $_POST['zip'];
+			;
 			?>
 		</div>
 	</div>
