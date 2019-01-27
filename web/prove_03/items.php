@@ -21,9 +21,9 @@
 				<div class="card" style="width: 18rem;">
 					<img class="card-img-top" src="..." alt="Card image cap">
 					<div class="card-body">
-						<h5 class="card-title">Card title</h5>
-						<h5 class="card-title">Card title</h5>
-						<button class="add" id="item1-100">Add to Cart</button>
+						<h5 class="card-title">Item1</h5>
+						<h5 class="card-title">$100</h5>
+						<button class="add" id="Item1-100">Add to Cart</button>
 					</div>
 				</div>
 			</div>
@@ -31,8 +31,8 @@
 				<div class="card" style="width: 18rem;">
 					<img class="card-img-top" src="..." alt="Card image cap">
 					<div class="card-body">
-						<h5 class="card-title">Card title</h5>
-						<h5 class="card-title">Card title</h5>
+						<h5 class="card-title">Item2</h5>
+						<h5 class="card-title">$200</h5>
 						<button class="add" id="item2-200">Add to Cart</button>
 					</div>
 				</div>
@@ -41,8 +41,8 @@
 				<div class="card" style="width: 18rem;">
 					<img class="card-img-top" src="..." alt="Card image cap">
 					<div class="card-body">
-						<h5 class="card-title">Card title</h5>
-						<h5 class="card-title">Card title</h5>
+						<h5 class="card-title">Item3</h5>
+						<h5 class="card-title">$300</h5>
 						<button class="add" id="item3-300">Add to Cart</button>
 					</div>
 				</div>
@@ -51,8 +51,8 @@
 				<div class="card" style="width: 18rem;">
 					<img class="card-img-top" src="..." alt="Card image cap">
 					<div class="card-body">
-						<h5 class="card-title">Card title</h5>
-						<h5 class="card-title">Card title</h5>
+						<h5 class="card-title">Item4</h5>
+						<h5 class="card-title">$400</h5>
 						<button class="add" id="item4-400">Add to Cart</button>
 					</div>
 				</div>
@@ -64,8 +64,8 @@
 				<div class="card" style="width: 18rem;">
 					<img class="card-img-top" src="..." alt="Card image cap">
 					<div class="card-body">
-						<h5 class="card-title">Card title</h5>
-						<h5 class="card-title">Card title</h5>
+						<h5 class="card-title">Item5</h5>
+						<h5 class="card-title">$500</h5>
 						<button class="add" id="item5-500">Add to Cart</button>
 					</div>
 				</div>
