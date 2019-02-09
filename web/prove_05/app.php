@@ -16,7 +16,7 @@ session_start();
 	<?php require("header.php")?>
 	<div class="row">
 		<div id="nav" class="col-sm-4">
-			<form id="data-entry" method="POST">
+			<form id="data-entry" action="db.php" method="POST">
 				Select a Category:
 				<br>
 				<select name="data-type">
@@ -43,32 +43,33 @@ session_start();
 	</div>
 
 	<script type="text/javascript">
-		$("#data-entry").submit(function(e) {
-			e.preventDefault();
-			var formData=$(this).serialize();
-			var url="db.php";
-			var url2="window.php";
-			grabData(formData, url);
-		});
+		var frm = $('#data-entry');
 
-		function grabData(formData, pUrl) {
-			$.ajax({
-				url: url,
-				type: 'POST',
-				data: formData,
-				success: function(response) {
-					console.log("First success");
-				    $.ajax({
-				    	url: url2
+	    frm.submit(function (e) {
+
+	        e.preventDefault();
+
+	        $.ajax({
+	            type: frm.attr('method'),
+	            url: frm.attr('action'),
+	            data: frm.serialize(),
+	            success: function (data) {
+	            	console.log("Success 1")
+	                $.ajax({
+				    	url: 'window.php'
 				    	type: 'POST'
 				    	success: function(response) {
-				    		console.log("Second success");
+				    		console.log("Success 2");
 				    		$("#plot-window").html(response);
 				    	}
-				    })
-				}
-			});
-		}
+				    });
+	            },
+	            error: function (data) {
+	                console.log('An error occurred.');
+	                console.log(data);
+	            },
+	        });
+	    });
 	</script>
 </body>
 </html>
