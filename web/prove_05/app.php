@@ -57,10 +57,12 @@ session_start();
 				type: 'POST',
 				data: formData,
 				success: function(response) {
+					console.log("First success");
 				    $.ajax({
 				    	url: url2
 				    	type: 'POST'
 				    	success: function(response) {
+				    		console.log("Second success");
 				    		$("#plot-window").html(response);
 				    	}
 				    })
