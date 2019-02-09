@@ -57,13 +57,13 @@ session_start();
 	            	console.log("Success 1")
 
 	                $.ajax({
-				    	url: 'window.php'
+				    	url: 'window.php',
 				    	success: function(response) {
 				    		console.log("Success 2");
 				    		$("#plot-window").html(response);
 				    	}
 				    });
-				    
+
 	            },
 	            error: function (data) {
 	                console.log('An error occurred.');
