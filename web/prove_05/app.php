@@ -74,7 +74,7 @@ session_start();
 
 			$data = $_SESSION["query-results"];
 
-			echo $data;
+			echo $data['description'];
 			?>
 		</div>
 	</div>
