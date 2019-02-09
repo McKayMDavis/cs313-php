@@ -55,7 +55,6 @@ session_start();
 				$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
 				$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-				echo 'Success';
 			}
 			catch (PDOException $ex)
 			{
@@ -66,9 +65,9 @@ session_start();
 			$table = 'expense';
 			$year = '2018';
 
-/*			$query = $db->prepare('SELECT * FROM :table WHERE year=:year');
+			$query = $db->prepare('SELECT * FROM :table WHERE year=:year');
 			$query->execute(array(':table' => $table, ':year' => $year));
-			$results = $query->fetchAll(PDO::FETCH_ASSOC);
+/*			$results = $query->fetchAll(PDO::FETCH_ASSOC);
 
 			$_SESSION["query-results"] = $results;
 
