@@ -66,7 +66,8 @@ session_start();
 			$year = '2018';
 
 
-			$query = $db->query('SELECT * FROM $table WHERE year=$year');
+			$query = $db->prepare('SELECT * FROM expense WHERE year=2018');
+			$query->execute();
 /*			$results = $query->fetchAll(PDO::FETCH_ASSOC);
 
 			$_SESSION["query-results"] = $results;
