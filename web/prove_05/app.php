@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html>
 <html lang="en">
@@ -73,7 +70,7 @@ session_start();
 
 			$_SESSION["query-results"] = $results;
 
-			$data = $_SESSION["query-results"]
+			$data = $_SESSION["query-results"];
 
 			echo $data;
 			?>
