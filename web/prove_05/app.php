@@ -68,13 +68,13 @@ session_start();
 
 			$query = $db->prepare('SELECT * FROM expense WHERE year=:year');
 			$query->execute(array(':year' => $year));
-/*			$results = $query->fetchAll(PDO::FETCH_ASSOC);
+			$results = $query->fetchAll(PDO::FETCH_ASSOC);
 
 			$_SESSION["query-results"] = $results;
 
 			$data = $_SESSION["query-results"];
 
-			echo $data;*/
+			echo $data;
 			?>
 		</div>
 	</div>
