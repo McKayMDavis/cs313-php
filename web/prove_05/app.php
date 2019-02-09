@@ -17,7 +17,7 @@ session_start();
 	<?php require("header.php")?>
 	<div class="row">
 		<div id="nav" class="col-sm-4">
-			<form action="db.php" method="post">
+			<form>
 				Select a Category:
 				<br>
 				<select name="data-type">
