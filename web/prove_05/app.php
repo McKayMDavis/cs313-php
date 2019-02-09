@@ -16,7 +16,7 @@ session_start();
 	<?php require("header.php")?>
 	<div class="row">
 		<div id="nav" class="col-sm-4">
-			<form id="data-entry" action="db.php" method="POST">
+			<form id="data-entry" method="POST">
 				Select a Category:
 				<br>
 				<select name="data-type">
@@ -39,38 +39,68 @@ session_start();
 			</form>
 		</div>
 		<div id="plot-window" class="col-sm-8">
+			<?php
+			try
+			{
+				$dbUrl = getenv('DATABASE_URL');
+
+				$dbOpts = parse_url($dbUrl);
+
+				$dbHost = $dbOpts["host"];
+				$dbPort = $dbOpts["port"];
+				$dbUser = $dbOpts["user"];
+				$dbPassword = $dbOpts["pass"];
+				$dbName = ltrim($dbOpts["path"],'/');
+
+				$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+
+				$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+			}
+			catch (PDOException $ex)
+			{
+				echo 'Error!: ' . $ex->getMessage();
+				die();
+			}
+
+			$table = 'expense';
+			$year = 2018;
+
+
+			$query = $db->prepare('SELECT * FROM expense WHERE year=:year');
+			$query->execute(array(':year' => $year));
+			while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+			{
+			  echo 'vendor: ' . $row['vendor'];
+			}
+			?>
 		</div>
 	</div>
 
 	<script type="text/javascript">
-		var frm = $('#data-entry');
+		$("#data-entry").submit(function(e) {
+			e.preventDefault();
+			var formData=$(this).serialize();
+			var url="db.php";
+			var url2="window.php";
+			grabData(formData, url);
+		});
 
-	    frm.submit(function (e) {
-
-	        e.preventDefault();
-
-	        $.ajax({
-	            type: frm.attr('method'),
-	            url: frm.attr('action'),
-	            data: frm.serialize(),
-	            success: function (data) {
-	            	console.log("Success 1")
-
-	                $.ajax({
-				    	url: 'window.php',
+		function grabData(formData, pUrl) {
+			$.ajax({
+				url: url,
+				type: 'POST',
+				data: formData,
+				success: function(response) {
+				    $.ajax({
+				    	url: url2
+				    	type: 'POST'
 				    	success: function(response) {
-				    		console.log("Success 2");
 				    		$("#plot-window").html(response);
 				    	}
-				    });
-
-	            },
-	            error: function (data) {
-	                console.log('An error occurred.');
-	                console.log(data);
-	            },
-	        });
-	    });
+				    })
+				}
+			});
+		}
 	</script>
 </body>
 </html>
