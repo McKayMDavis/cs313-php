@@ -2,10 +2,13 @@
 session_start();
 $data = $_SESSION["query-results"];
 $headers = array();
+$rows = array();
 
+//display table
 echo "<table><tr>";
 foreach($data[0] as $colname => $datum) {
 	echo "<th>" . $colname . "</th>";
+	$headers[] = $colname;
 }
 echo "</tr>";
 
@@ -16,18 +19,18 @@ foreach ($data as $row) {
 	}
 	echo "</tr>";
 }
+echo "</table>";
 
-
-
-/*// create header array here...$myHeaders
-// create data array here... $myData
-
+//write csv
 $csvName = 'temp.csv';
 
 $fp = fopen($csvName, 'w');
-fputcsv($fp, $myHeaders);
-foreach ($myData as $line) {
-    fputcsv($fp, $line);
+fputcsv($fp, $headers);
+foreach ($data as $row) {
+    fputcsv($fp, $row);
 }
-fclose($fp);*/
+fclose($fp);
+
+exec("Rscript ../../R/plots.R");
+echo "<img src='temp.png'></img>";
 ?>
