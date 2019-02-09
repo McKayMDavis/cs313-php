@@ -55,14 +55,6 @@ session_start();
 	            data: frm.serialize(),
 	            success: function (data) {
 	            	console.log("Success 1")
-	                $.ajax({
-				    	url: 'window.php'
-				    	type: 'POST'
-				    	success: function(response) {
-				    		console.log("Success 2");
-				    		$("#plot-window").html(response);
-				    	}
-				    });
 	            },
 	            error: function (data) {
 	                console.log('An error occurred.');
