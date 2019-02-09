@@ -39,43 +39,6 @@ session_start();
 			</form>
 		</div>
 		<div id="plot-window" class="col-sm-8">
-			<?php
-			try
-			{
-				$dbUrl = getenv('DATABASE_URL');
-
-				$dbOpts = parse_url($dbUrl);
-
-				$dbHost = $dbOpts["host"];
-				$dbPort = $dbOpts["port"];
-				$dbUser = $dbOpts["user"];
-				$dbPassword = $dbOpts["pass"];
-				$dbName = ltrim($dbOpts["path"],'/');
-
-				$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-
-				$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			}
-			catch (PDOException $ex)
-			{
-				echo 'Error!: ' . $ex->getMessage();
-				die();
-			}
-
-			$table = 'expense';
-			$year = 2018;
-
-
-			$query = $db->prepare('SELECT * FROM expense WHERE year=:year');
-			$query->execute(array(':year' => $year));
-			$results = $query->fetchAll(PDO::FETCH_ASSOC);
-
-			$_SESSION["query-results"] = $results;
-
-			$data = $_SESSION["query-results"];
-
-			echo $data;
-			?>
 		</div>
 	</div>
 
