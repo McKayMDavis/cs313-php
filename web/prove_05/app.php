@@ -37,7 +37,6 @@
 		</div>
 		<div id="plot-window" class="col-sm-8">
 			<?php
-			session_start();
 			try
 			{
 				$dbUrl = getenv('DATABASE_URL');
