@@ -26,7 +26,9 @@ $csvName = 'temp.csv';
 
 $fp = fopen($csvName, 'w');
 fputcsv($fp, $headers);
+echo $headers;
 foreach ($data as $row) {
+	echo $row;
     fputcsv($fp, $row);
 }
 fclose($fp);
