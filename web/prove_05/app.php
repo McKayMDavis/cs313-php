@@ -68,7 +68,7 @@ session_start();
 
 			$query = $db->prepare('SELECT * FROM expense WHERE year=:year');
 			$query->execute(array(':year' => $year));
-			while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+			while ($row = $query->fetch(PDO::FETCH_ASSOC))
 			{
 			  echo 'vendor: ' . $row['vendor'];
 			}
