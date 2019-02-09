@@ -17,7 +17,7 @@ session_start();
 	<?php require("header.php")?>
 	<div class="row">
 		<div id="nav" class="col-sm-4">
-			<form>
+			<form id="data-entry" method="POST">
 				Select a Category:
 				<br>
 				<select name="data-type">
@@ -45,7 +45,7 @@ session_start();
 	</div>
 
 	<script type="text/javascript">
-		$("#statusform").submit(function(e) {
+		$("#data-entry").submit(function(e) {
 			e.preventDefault();
 			var formData=$(this).serialize();
 			var url="db.php";

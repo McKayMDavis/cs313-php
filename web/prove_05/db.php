@@ -30,5 +30,4 @@ $query->execute(array(':table' => $table, ':year' => $year));
 $results = $query->fetchAll(PDO::FETCH_ASSOC);
 
 $_SESSION["query-results"] = $results;
-echo $results;
 ?>
