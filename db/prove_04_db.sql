@@ -24,17 +24,6 @@ CREATE TABLE goal (
 , last_update    INT          NOT NULL REFERENCES users(user_id)
 );
 
-CREATE TABLE total (
-  total_id       SERIAL       PRIMARY KEY
-, total_expense  INT          NOT NULL
-, total_revenue  INT          NOT NULL
-, total_profits  INT          NOT NULL
-, year           SMALLINT     NOT NULL
-, date_entered   DATE         NOT NULL
-, last_update    INT          NOT NULL REFERENCES users(user_id)
-, goal_id        INT          NOT NULL REFERENCES goal(goal_id) UNIQUE
-);
-
 CREATE TABLE expense (
   expense_id     SERIAL       PRIMARY KEY
 , description    TEXT         NOT NULL
@@ -43,7 +32,6 @@ CREATE TABLE expense (
 , year           SMALLINT     NOT NULL
 , date_entered   DATE         NOT NULL
 , last_update    INT          NOT NULL REFERENCES users(user_id)
-, total_id       INT          NOT NULL REFERENCES total(total_id)
 , goal_id        INT          NOT NULL REFERENCES goal(goal_id)
 );
 
@@ -55,6 +43,5 @@ CREATE TABLE revenue (
 , year           SMALLINT     NOT NULL
 , date_entered   DATE         NOT NULL
 , last_update    INT          NOT NULL REFERENCES users(user_id)
-, total_id       INT          NOT NULL REFERENCES total(total_id)
 , goal_id        INT          NOT NULL REFERENCES goal(goal_id)
 );

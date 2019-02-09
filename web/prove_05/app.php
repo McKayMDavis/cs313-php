@@ -40,7 +40,7 @@ session_start();
 			</form>
 		</div>
 		<div id="plot-window" class="col-sm-8">
-			<?php require(window.php)?>
+			<?php require(window.php);?>
 		</div>
 	</div>
 
