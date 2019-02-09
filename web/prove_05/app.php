@@ -39,9 +39,7 @@ session_start();
 				<input type="submit" value="Submit">
 			</form>
 		</div>
-		<div id="plot-window" class="col-sm-8">
-			<?php require(window.php);?>
-		</div>
+		<div id="plot-window" class="col-sm-8"></div>
 	</div>
 
 	<script type="text/javascript">
