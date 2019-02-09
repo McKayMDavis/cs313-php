@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <html lang="en">
@@ -59,7 +62,7 @@
 				die();
 			}
 
-			/*$table = 'expense';
+			$table = 'expense';
 			$year = '2018';
 
 			$query = $db->prepare('SELECT * FROM :table WHERE year=:year');
@@ -70,7 +73,7 @@
 
 			$data = $_SESSION["query-results"];
 
-			echo $data;*/
+			echo $data;
 			?>
 		</div>
 	</div>
