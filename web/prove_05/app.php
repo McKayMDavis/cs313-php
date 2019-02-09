@@ -36,6 +36,7 @@ session_start();
 					}
 					?>
 				</select>
+				<input type="submit" value="Submit">
 			</form>
 		</div>
 		<div id="plot-window" class="col-sm-8">
