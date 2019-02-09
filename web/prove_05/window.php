@@ -10,9 +10,11 @@ foreach($data[0] as $colname => $datum) {
 echo "</tr>";
 
 foreach ($data as $row) {
+	echo "<tr>";
 	foreach ($row as $colname => $datum) {
-		$headers[] = $colname;
+		echo "<td>" . $datum . "</td>";
 	}
+	echo "</tr>";
 }
 
 
