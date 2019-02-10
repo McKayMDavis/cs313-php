@@ -31,12 +31,6 @@ foreach ($data as $row) {
 }
 fclose($fp);
 
-$csvData = file_get_contents($csvName);
-header('Content-Type: application/vnd.ms-excel');
-header('Content-Length: ' . strlen($csvData));
-echo $csvData;
-exit;
-
 exec("Rscript plots.R");
 echo "<img src='temp.png'></img>";
 ?>
