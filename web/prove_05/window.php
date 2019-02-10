@@ -32,23 +32,6 @@ foreach ($data as $row) {
 fclose($fp);
 
 //make a plot from the csv (this doesn't work for some reason). The R script is called and executes but the image file doesn't seem to be saving. I'm wondering if it either isn't getting the csv properly or if the image isn't saving properly. I have no idea how to check these.
-
-  $cmd = "echo 'argv <- \"plots.R\"; source(argv)' | " .
-         "/usr/bin/R --vanilla --slave";
-
-  $handle = popen($cmd, "r");
-  $ret = "";
-  do{
-    $data = fread($handle, 8192);
-    if(strlen($data) == 0){
-      break;
-    }
-    $ret .= $data;
-  }
-  while(true);
-  pclose($handle);
-
-  header("Content-type:image/png");
-  echo $ret;
-
+exec("/usr/lib/R/bin/Rscript plots.R");
+echo "<img src='temp.png' alt='Plot Image'></img>";
 ?>

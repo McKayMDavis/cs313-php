@@ -1,8 +1,7 @@
-dev.off.wrap <- function(){
-  dev.off()
-  invisible()
-}
+args <- commandArgs(TRUE)
 
-bitmap(file = "%stdout", type="png256")
-pie(rep(1, 24), col = rainbow(24))
-dev.off.wrap()
+data <- read.csv("temp.csv")
+
+png(filename = "temp.png", width = 200, height = 200)
+plot(data$date_entered, data$amount)
+dev.off()
