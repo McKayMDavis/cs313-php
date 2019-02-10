@@ -31,7 +31,7 @@ foreach ($data as $row) {
 }
 fclose($fp);
 
-echo "<a href='temp.csv'>Download as CSV</a><br>";
+echo "<a href='temp.csv'>Download CSV</a><br>";
 
 //This doesn't work. I think it's because heroku doesn't know where Rscript is. I have no idea how to tell it where it is.
 exec("Rscript plots.R");
