@@ -30,8 +30,9 @@ foreach ($data as $row) {
     fputcsv($fp, array_values($row));
 }
 fclose($fp);
-
+$N = 1;
 //make a plot from the csv (this doesn't work for some reason). The R script is called and executes but the image file doesn't seem to be saving. I'm wondering if it either isn't getting the csv properly or if the image isn't saving properly. I have no idea how to check these.
-exec("/usr/lib/R/bin/Rscript plots.R");
+exec("Rscript plots.R $N", $resp);
+echo $resp;
 echo "<img src='temp.png' alt='Plot Image'></img>";
 ?>
