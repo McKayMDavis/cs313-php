@@ -32,5 +32,6 @@ foreach ($data as $row) {
 fclose($fp);
 
 exec("Rscript plots.R");
-echo "<img src='temp.png'></img>";
+$nocache = rand();
+echo "<img src='temp.png' alt='Plot Image'></img>";
 ?>
