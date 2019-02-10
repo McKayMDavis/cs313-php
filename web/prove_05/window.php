@@ -33,7 +33,9 @@ fclose($fp);
 
 //make a plot from the csv (this doesn't work for some reason)
 exec("Rscript plots.R", $resp);
-echo json_decode($resp);
-$nocache = rand();
+$str = $response[0];
+$myobj = json_decode($str);
+
+echo $myobj->first_name;
 echo "<img src='temp.png' alt='Plot Image'></img>";
 ?>
