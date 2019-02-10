@@ -15,32 +15,34 @@ session_start();
 </head>
 <body>
 	<?php require("header.php")?>
-	<div class="row">
-		<div id="nav" class="col-sm-4 navigator">
-			<form id="data-entry" action="db.php" method="POST">
-				Select a Category:
-				<br>
-				<select name="data-type">
-					<option value="goal">Goals</option>
-					<option value="total">Totals</option>
-					<option value="expense">Expenses</option>
-					<option value="revenue">Revenue</option>
-				</select>
-				<br>
-				Select a Year:
-				<br>
-				<select name="year">
-					<?php 
-					foreach (range(2012, 2019) as $year) {
-						echo "<option value=" . $year . ">" . $year . "</option>";
-					}
-					?>
-				</select>
-				<br>
-				<input type="submit" value="Submit">
-			</form>
-		</div>
-		<div id="plot-window" class="col-sm-8">
+	<div class="container-fluid">
+		<div class="row">
+			<div id="nav" class="col-sm-4 navigator">
+				<form id="data-entry" action="db.php" method="POST">
+					Select a Category:
+					<br>
+					<select name="data-type">
+						<option value="goal">Goals</option>
+						<option value="total">Totals</option>
+						<option value="expense">Expenses</option>
+						<option value="revenue">Revenue</option>
+					</select>
+					<br>
+					Select a Year:
+					<br>
+					<select name="year">
+						<?php 
+						foreach (range(2012, 2019) as $year) {
+							echo "<option value=" . $year . ">" . $year . "</option>";
+						}
+						?>
+					</select>
+					<br>
+					<input type="submit" value="Submit">
+				</form>
+			</div>
+			<div id="plot-window" class="col-sm-8">
+			</div>
 		</div>
 	</div>
 
