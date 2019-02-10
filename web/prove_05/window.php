@@ -28,8 +28,8 @@ $fp = fopen($csvName, 'w');
 fputcsv($fp, $headers);
 echo json_encode($headers);
 foreach ($data as $row) {
-	echo json_encode($row);
-    fputcsv($fp, $row);
+	echo json_encode(array_values($row));
+    fputcsv($fp, array_values($row));
 }
 fclose($fp);
 
