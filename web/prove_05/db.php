@@ -25,7 +25,10 @@ catch (PDOException $ex)
 $table = htmlspecialchars($_POST["data-type"]);
 $year = htmlspecialchars($_POST["year"]);
 
-$query = $db->prepare('SELECT * FROM `' . $table . '` WHERE year=:year');
+if ($table == 'expense') {
+	$query = $db->prepare('SELECT * FROM expense WHERE year=:year');
+}
+
 $query->execute(array(':year' => $year));
 $results = $query->fetchAll(PDO::FETCH_ASSOC);
 
