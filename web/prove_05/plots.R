@@ -1,7 +1,7 @@
 args <- commandArgs(TRUE)
+library(here)
+data <- read.csv(here("temp.csv"))
 
-data <- read.csv("temp.csv")
-
-png(filename = "temp.png", width = 200, height = 200)
+png(filename = here("temp.png"), width = 200, height = 200)
 plot(data$date_entered, data$amount)
 dev.off()
