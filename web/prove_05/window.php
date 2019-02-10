@@ -13,7 +13,6 @@ foreach($data[0] as $colname => $datum) {
 echo "</tr>";
 
 foreach ($data as $row) {
-	echo $row;
 	echo "<tr>";
 	foreach ($row as $colname => $datum) {
 		echo "<td>" . $datum . "</td>";
@@ -27,7 +26,9 @@ $csvName = 'temp.csv';
 
 $fp = fopen($csvName, 'w');
 fputcsv($fp, $headers);
+echo json_encode($headers);
 foreach ($data as $row) {
+	echo json_encode($row);
     fputcsv($fp, $row);
 }
 fclose($fp);
