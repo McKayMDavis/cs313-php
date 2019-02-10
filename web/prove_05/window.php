@@ -32,6 +32,7 @@ foreach ($data as $row) {
 fclose($fp);
 
 //make a plot from the csv (this doesn't work for some reason). The R script is called and executes but the image file doesn't seem to be saving.
-exec("Rscript plots.R");
+exec("Rscript plots.R", $response);
+echo $response;
 echo "<img src='temp.png' alt='Plot Image'></img>";
 ?>
