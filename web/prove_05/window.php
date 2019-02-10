@@ -35,7 +35,6 @@ fclose($fp);
 exec("Rscript plots.R", $response);
 $str = $response[0];
 $myobj = json_decode($str);
-
-echo $myobj->year;
+echo $myobj;
 echo "<img src='temp.png' alt='Plot Image'></img>";
 ?>
