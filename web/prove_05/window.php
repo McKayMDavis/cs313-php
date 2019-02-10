@@ -31,9 +31,9 @@ foreach ($data as $row) {
 }
 fclose($fp);
 
-$N = 5;
 //make a plot from the csv (this doesn't work for some reason)
-exec("Rscript plots.R $N");
+exec("Rscript plots.R", $resp);
+echo $resp;
 $nocache = rand();
 echo "<img src='temp.png' alt='Plot Image'></img>";
 ?>
