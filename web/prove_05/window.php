@@ -21,7 +21,7 @@ foreach ($data as $row) {
 }
 echo "</table>";
 
-//write csv
+//write csv (this part works)
 $csvName = 'temp.csv';
 
 $fp = fopen($csvName, 'w');
@@ -31,7 +31,9 @@ foreach ($data as $row) {
 }
 fclose($fp);
 
-exec("Rscript plots.R");
+$N = 5;
+//make a plot from the csv (this doesn't work for some reason)
+exec("Rscript plots.R $N");
 $nocache = rand();
 echo "<img src='temp.png' alt='Plot Image'></img>";
 ?>

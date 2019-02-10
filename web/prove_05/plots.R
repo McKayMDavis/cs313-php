@@ -1,7 +1,8 @@
 args <- commandArgs(TRUE)
 
-data <- read.csv("temp.csv")
+N <- args[1]
+x <- rnorm(N,0,1)
 
-png(filename = "temp.png", width = 200, height = 200)
-plot(data$date_entered, data$amount)
+png(filename="temp.png", width=500, height=500)
+hist(x, col="lightblue")
 dev.off()
