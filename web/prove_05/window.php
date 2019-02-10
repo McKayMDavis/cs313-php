@@ -5,7 +5,7 @@ $headers = array();
 $rows = array();
 
 //display table
-echo "<table><tr>";
+echo "<table class='table-bordered'><tr>";
 foreach($data[0] as $colname => $datum) {
 	echo "<th>" . $colname . "</th>";
 	$headers[] = $colname;

@@ -31,8 +31,6 @@ if ($table == 'expense') {
 	$query = $db->prepare('SELECT * FROM revenue WHERE year=:year');
 } elseif ($table == 'goal') {
 	$query = $db->prepare('SELECT * FROM goal WHERE year=:year');
-} elseif ($table == 'total') {
-	$query = $db->prepare('SELECT * FROM total WHERE year=:year');
 }
 
 $query->execute(array(':year' => $year));
