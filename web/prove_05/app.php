@@ -17,7 +17,7 @@ session_start();
 	<?php require("header.php")?>
 	<div class="container-fluid">
 		<div class="row">
-			<div id="nav" class="col-sm-4 navigator">
+			<div id="nav" class="col-sm-3 navigator">
 				<form id="data-entry" action="db.php" method="POST">
 					Select a Category:
 					<br>
@@ -41,7 +41,7 @@ session_start();
 					<input type="submit" value="Submit">
 				</form>
 			</div>
-			<div id="plot-window" class="col-sm-8">
+			<div id="plot-window" class="col-sm-9">
 			</div>
 		</div>
 	</div>
