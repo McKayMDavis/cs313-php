@@ -32,7 +32,7 @@ foreach ($data as $row) {
 fclose($fp);
 
 //make a plot from the csv (this doesn't work for some reason)
-exec("Rscript plots.R", $resp);
+exec("Rscript plots.R", $response);
 $str = $response[0];
 $myobj = json_decode($str);
 
