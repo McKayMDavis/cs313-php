@@ -23,7 +23,6 @@ session_start();
 					<br>
 					<select name="data-type">
 						<option value="goal">Goals</option>
-						<option value="total">Totals</option>
 						<option value="expense">Expenses</option>
 						<option value="revenue">Revenue</option>
 					</select>
