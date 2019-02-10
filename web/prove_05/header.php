@@ -1,3 +1,3 @@
 <?php
-echo "<h1>Data Visualization App</h1>";
+echo "<h1 class='heading'>Data Visualization App</h1>";
 ?>
