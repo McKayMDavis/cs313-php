@@ -41,7 +41,7 @@ session_start();
 					<input type="submit" value="Submit">
 				</form>
 			</div>
-			<div id="plot-window" class="col-sm-9">
+			<div id="plot-window" class="col-sm-8">
 			</div>
 		</div>
 	</div>
