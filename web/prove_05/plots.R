@@ -1,11 +1,7 @@
 args <- commandArgs(TRUE)
-tmp <- strsplit(args, " ")
 
-a <- as.numeric(tmp[[1]][1])
-b <- as.numeric(tmp[[2]][1])
+data <- read.csv("temp.csv")
 
-
-output <- list(first_name="Finau")
-
-library(rjson)
-cat(toJSON(output))
+png(filename = "temp.png", width = 200, height = 200)
+plot(data$date_entered, data$amount)
+dev.off()

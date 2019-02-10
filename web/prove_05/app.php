@@ -11,11 +11,12 @@ session_start();
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<link rel="stylesheet" type="text/css" href="custom.css">
 </head>
 <body>
 	<?php require("header.php")?>
 	<div class="row">
-		<div id="nav" class="col-sm-4">
+		<div id="nav" class="col-sm-4 navigator">
 			<form id="data-entry" action="db.php" method="POST">
 				Select a Category:
 				<br>
@@ -35,6 +36,7 @@ session_start();
 					}
 					?>
 				</select>
+				<br>
 				<input type="submit" value="Submit">
 			</form>
 		</div>
