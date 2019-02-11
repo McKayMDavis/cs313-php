@@ -33,7 +33,7 @@ fclose($fp);
 
 echo "<a href='temp.csv'>Download CSV</a><br>";
 
-//This doesn't work. I think it's because heroku doesn't know where Rscript is. I have no idea how to tell it where it is.
+//Had to use R buildpack to get Rscript installed in the slug
 exec("./bin/Rscript plots.R");
 echo "<img src='temp.png' alt='Plot Image'></img>";
 ?>
