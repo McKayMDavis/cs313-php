@@ -40,6 +40,7 @@ session_start();
 
 	<script type="text/javascript">
 		var frm = $('#data-entry');
+		var frm2 = $('#enter');
 
 	    frm.submit(function (e) {
 
@@ -66,6 +67,14 @@ session_start();
 	                console.log(data);
 	            },
 	        });
+	    });
+
+	    frm2.submit(function (e) {
+	    	e.preventDefault();
+
+	    	$.ajax({
+	    		
+	    	});
 	    });
 	</script>
 </body>
