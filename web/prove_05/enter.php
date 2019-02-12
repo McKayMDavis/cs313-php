@@ -78,7 +78,7 @@ session_start();
 	    		data: frm2.serialize(),
 	    		success: function(response) {
 	    			console.log("Success 3");
-	    			$('#plot-window').html();
+	    			$('#plot-window').html('response');
 	    		}
 	    	});
 	    });

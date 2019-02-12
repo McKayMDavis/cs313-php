@@ -31,5 +31,6 @@ for ($i = 0; $i < $nrow; $i++) {
 	echo "</tr>";
 }
 echo "</table>";
+echo "<input type='submit' value='Add Rows'>";
 echo "</form>";
 ?>
