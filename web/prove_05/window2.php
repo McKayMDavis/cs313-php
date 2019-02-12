@@ -4,7 +4,7 @@ $data = $_SESSION["table-results"];
 $nrow = $_SESSION["table-nrow"];
 
 //display table
-echo "<form id='enter' action='insert.php' method='POST'>"
+echo "<form id='enter' action='insert.php' method='POST'>";
 echo "<table class='table table-bordered' style='width:100%'><tr>";
 foreach($data[0] as $colname => $datum) {
 	if (strpos($colname, 'id') === false) {
