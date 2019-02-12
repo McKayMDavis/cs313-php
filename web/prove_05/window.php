@@ -34,7 +34,6 @@ fclose($fp);
 echo "<a href='temp.csv'>Download CSV</a><br>";
 
 //Had to use R buildpack to get Rscript installed in the slug
-exec("/app/bin/Rscript /app/web/prove_05/plots.R", $output);
-var_dump($output);
+exec("/app/bin/Rscript /app/web/prove_05/plots.R");
 echo "<img src='temp.png' alt='Plot Image'></img>";
 ?>

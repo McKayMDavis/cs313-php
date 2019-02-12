@@ -1,11 +1,10 @@
-<?php
+<? php
 session_start();
 ?>
 <!DOCTYPE html>
-<html>
 <html lang="en">
 <head>
-	<title>Dashboard</title>
+	<title>Data Entry</title>
 	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -18,7 +17,7 @@ session_start();
 	<div class="container-fluid">
 		<div class="row">
 			<div id="nav" class="col-sm-3 navigator">
-				<form id="data-entry" action="select.php" method="POST">
+				<form id="data-entry" action="construct_input.php" method="POST">
 					Select a Category:
 					<br>
 					<select name="data-type">
@@ -27,15 +26,9 @@ session_start();
 						<option value="revenue">Revenue</option>
 					</select>
 					<br>
-					Select a Year:
+					How Many Rows?
 					<br>
-					<select name="year">
-						<?php 
-						foreach (range(2012, 2019) as $year) {
-							echo "<option value=" . $year . ">" . $year . "</option>";
-						}
-						?>
-					</select>
+					<input type="text" name="nrow" maxlength="3">
 					<br>
 					<input type="submit" value="Submit">
 				</form>
@@ -60,7 +53,7 @@ session_start();
 	            	console.log("Success 1")
 
 	                $.ajax({
-				    	url: 'window.php',
+				    	url: 'window2.php',
 				    	success: function(response) {
 				    		console.log("Success 2");
 				    		$("#plot-window").html(response);
