@@ -73,7 +73,13 @@ session_start();
 	    	e.preventDefault();
 
 	    	$.ajax({
-	    		
+	    		type: frm2.attr('method'),
+	    		url: frm2.attr('action'),
+	    		data: frm2.serialize(),
+	    		success: function(response) {
+	    			console.log("Success 3");
+	    			$('#plot-window').html();
+	    		}
 	    	});
 	    });
 	</script>
