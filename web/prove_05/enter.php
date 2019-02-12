@@ -70,6 +70,7 @@ session_start();
 	    });
 
 	    frm2.submit(function (e) {
+
 	    	e.preventDefault();
 
 	    	$.ajax({
@@ -78,7 +79,7 @@ session_start();
 	    		data: frm2.serialize(),
 	    		success: function(response) {
 	    			console.log("Success 3");
-	    			$('#plot-window').html('response');
+	    			$('#plot-window').html();
 	    		}
 	    	});
 	    });

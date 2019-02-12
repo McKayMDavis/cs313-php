@@ -14,4 +14,5 @@ $results = $query->fetchAll(PDO::FETCH_ASSOC);
 
 $_SESSION["table-results"] = $results;
 $_SESSION["table-nrow"] = htmlspecialchars($_POST["nrow"]);
+$_SESSION["table-name"] = $table;
 ?>
