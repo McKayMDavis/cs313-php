@@ -22,7 +22,7 @@ foreach ($data as $row) {
 echo "</table>";
 
 //write csv (this part works)
-$csvName = 'temp.csv';
+$csvName = '/app/web/prove_05/temp.csv';
 
 $fp = fopen($csvName, 'w');
 fputcsv($fp, $headers);
