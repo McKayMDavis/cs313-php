@@ -1,4 +1,9 @@
 <?php
+session_start();
 require('db.php');
-var_dump($_POST['data']);
+
+$ncol = $_SESSION["ncol"];
+$nrow = $_SESSION["nrow"];
+
+var_dump($_POST["data"]);
 ?>
