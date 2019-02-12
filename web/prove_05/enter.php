@@ -21,7 +21,7 @@ session_start();
 					Select a Category:
 					<br>
 					<select name="data-type">
-						<option value="goal">Goals</option>
+						<!-- <option value="goal">Goals</option> -->
 						<option value="expense">Expenses</option>
 						<option value="revenue">Revenue</option>
 					</select>
