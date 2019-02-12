@@ -2,6 +2,8 @@
 session_start();
 $data = $_SESSION["table-results"];
 $nrow = $_SESSION["table-nrow"];
+var_dump($data);
+var_dump($nrow);
 
 //display table
 echo "<table class='table table-bordered' style='width:100%'><tr>";

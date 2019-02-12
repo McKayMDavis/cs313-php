@@ -11,6 +11,7 @@ if ($table == 'expense') {
 }
 
 $results = $query->fetchAll(PDO::FETCH_ASSOC);
+var_dump($results);
 
 $_SESSION["table-results"] = $results;
 $_SESSION["table-nrow"] = htmlspecialchars($_POST["nrow"]);
