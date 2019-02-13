@@ -34,15 +34,12 @@ session_start();
 				</form>
 			</div>
 			<div id="plot-window" class="col-sm-8">
-				<form id='enter' action='insert.php' method='POST'>
-				</form>
 			</div>
 		</div>
 	</div>
 
 	<script type="text/javascript">
 		var frm = $('#data-entry');
-		var frm2 = $('#enter');
 
 	    frm.submit(function (e) {
 
@@ -59,7 +56,7 @@ session_start();
 				    	url: 'window2.php',
 				    	success: function(response) {
 				    		console.log("Success 2");
-				    		$("#enter").html(response);
+				    		$("#plot-window").html(response);
 				    	}
 				    });
 
@@ -69,21 +66,6 @@ session_start();
 	                console.log(data);
 	            },
 	        });
-	    });
-
-	    frm2.submit(function (e) {
-
-	    	e.preventDefault();
-
-	    	$.ajax({
-	    		type: frm2.attr('method'),
-	    		url: frm2.attr('action'),
-	    		data: frm2.serialize(),
-	    		success: function(response) {
-	    			console.log("Success 3");
-	    			$('#enter').html();
-	    		},
-	    	});
 	    });
 	</script>
 </body>
