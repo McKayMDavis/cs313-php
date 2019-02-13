@@ -4,6 +4,14 @@ $data = $_SESSION["query-results"];
 $headers = array();
 $rows = array();
 
+echo "<ul class='nav nav-tabs'>
+	<li class='active'><a data-toggle='tab' href='#plot'>Visual</a></li>
+	<li><a data-toggle='tab' href='#data'>Table</a></li>
+</ul>
+
+<div class='tab-content'>
+	<div id='plot' class='tab-pane fade in active'>";
+
 //display table
 echo "<table class='table table-bordered' style='width:100%'><tr>";
 foreach($data[0] as $colname => $datum) {
@@ -33,7 +41,12 @@ fclose($fp);
 
 echo "<a href='temp.csv'>Download CSV</a><br>";
 
+echo "</div>
+	<div id='data' class='tab-pane fade'>";
+
 //Had to use R buildpack to get Rscript installed in the slug
 exec("/app/bin/Rscript /app/web/prove_05/plots.R");
 echo "<img src='temp.png' alt='Plot Image'></img>";
+
+echo "</div></div>";
 ?>
