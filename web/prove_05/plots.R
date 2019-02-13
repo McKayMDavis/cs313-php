@@ -6,5 +6,5 @@ p <- data %>%
   ggplot(aes(x = date_entered, y = amount)) +
   geom_point()
 png(filename = "/app/web/prove_05/temp.png", width = 500, height = 500)
-p
+plot(data$date_entered, data$amount)
 dev.off()
