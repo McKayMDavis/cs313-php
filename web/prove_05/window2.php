@@ -34,6 +34,4 @@ for ($i = 0; $i < $nrow; $i++) {
 echo "</table>";
 echo "<input type='submit' value='Add Rows'>";
 echo "</form>";
-header("Location: enter.php");
-die();
 ?>

@@ -18,4 +18,7 @@ if ($tname == 'expense') {
 		$statement->execute(array(':description' => $data[$i][0], ':client' => $data[$i][1], ':amount' => $data[$i][2], ':year' => $data[$i][3]));
 	}
 }
+
+header("Location: enter.php");
+die();
 ?>
