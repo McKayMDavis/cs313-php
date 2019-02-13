@@ -34,6 +34,8 @@ session_start();
 				</form>
 			</div>
 			<div id="plot-window" class="col-sm-8">
+				<form id='enter' action='insert.php' method='POST'>
+				</form>
 			</div>
 		</div>
 	</div>
@@ -57,7 +59,7 @@ session_start();
 				    	url: 'window2.php',
 				    	success: function(response) {
 				    		console.log("Success 2");
-				    		$("#plot-window").html(response);
+				    		$("#enter").html(response);
 				    	}
 				    });
 
@@ -79,7 +81,7 @@ session_start();
 	    		data: frm2.serialize(),
 	    		success: function(response) {
 	    			console.log("Success 3");
-	    			$('#plot-window').html();
+	    			$('#enter').html();
 	    		}
 	    	});
 	    });
