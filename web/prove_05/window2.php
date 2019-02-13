@@ -2,7 +2,6 @@
 session_start();
 $data = $_SESSION["table-results"];
 $nrow = $_SESSION["table-nrow"];
-$ncol = 0;
 
 //display table
 echo "<form id='enter' action='insert.php' method='POST'>";
@@ -35,6 +34,4 @@ for ($i = 0; $i < $nrow; $i++) {
 echo "</table>";
 echo "<input type='submit' value='Add Rows'>";
 echo "</form>";
-
-$_SESSION["ncol"] = $ncol;
 ?>

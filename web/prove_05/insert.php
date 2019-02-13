@@ -2,12 +2,12 @@
 require('db.php');
 session_start();
 
-$nrow = $_SESSION["nrow"];
+$nrow = $_SESSION["table-nrow"];
 $tname = $_SESSION["table-name"];
-$data = htmlspecialchars($_POST["data"]);
+$data = $_POST["data"];
 var_dump($nrow);
 var_dump($tname);
-var_dump($_POST["data"]);
+var_dump($data);
 
 //CHANGE LAST UPDATE TO BE THE USER THAT IS LOGGED IN
 if ($tname == 'expense') {
