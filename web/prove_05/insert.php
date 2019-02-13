@@ -1,5 +1,6 @@
 <?php
 require('db.php');
+require('header.php');
 session_start();
 
 $nrow = $_SESSION["table-nrow"];
@@ -10,15 +11,18 @@ $data = $_POST["data"];
 if ($tname == 'expense') {
 	for ($i = 0; $i < $nrow; $i++) {
 		$statement = $db->prepare('INSERT INTO expense (description, vendor, amount, year, date_entered, last_update, goal_id) VALUES (:description, :vendor, :amount, :year, CURRENT_DATE, 1, (SELECT goal_id FROM goal WHERE year=:year))');
-		$statement->execute(array(':description' => $data[$i][0], ':vendor' => $data[$i][1], ':amount' => $data[$i][2], ':year' => $data[$i][3]));
+		$success = $statement->execute(array(':description' => $data[$i][0], ':vendor' => $data[$i][1], ':amount' => $data[$i][2], ':year' => $data[$i][3]));
 	}
 } elseif ($tname == 'revenue') {
 	for ($i = 0; $i < $nrow; $i++) {
 		$statement = $db->prepare('INSERT INTO expense (description, client, amount, year, date_entered, last_update, goal_id) VALUES (:description, :client, :amount, :year, CURRENT_DATE, 1, (SELECT goal_id FROM goal WHERE year=:year))');
-		$statement->execute(array(':description' => $data[$i][0], ':client' => $data[$i][1], ':amount' => $data[$i][2], ':year' => $data[$i][3]));
+		$success = $statement->execute(array(':description' => $data[$i][0], ':client' => $data[$i][1], ':amount' => $data[$i][2], ':year' => $data[$i][3]));
 	}
 }
 
-header("Location:https://peaceful-retreat-89945.herokuapp.com/prove_05/enter.php");
-die();
+if ($success) {
+	echo "<h2>Data Upload Successful";
+} else {
+	echo "<h2>Data Upload Failed";
+}
 ?>
