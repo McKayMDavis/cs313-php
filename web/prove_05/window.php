@@ -12,6 +12,13 @@ echo "<ul class='nav nav-tabs'>
 <div class='tab-content'>
 	<div id='plot' class='tab-pane fade in active'>";
 
+//Had to use R buildpack to get Rscript installed in the slug
+exec("/app/bin/Rscript /app/web/prove_05/plots.R");
+echo "<img src='temp.png' alt='Plot Image'></img>";
+
+echo "</div>
+	<div id='data' class='tab-pane fade'>";
+
 //display table
 echo "<table class='table table-bordered' style='width:100%'><tr>";
 foreach($data[0] as $colname => $datum) {
@@ -40,13 +47,6 @@ foreach ($data as $row) {
 fclose($fp);
 
 echo "<a href='temp.csv'>Download CSV</a><br>";
-
-echo "</div>
-	<div id='data' class='tab-pane fade'>";
-
-//Had to use R buildpack to get Rscript installed in the slug
-exec("/app/bin/Rscript /app/web/prove_05/plots.R");
-echo "<img src='temp.png' alt='Plot Image'></img>";
 
 echo "</div></div>";
 ?>
