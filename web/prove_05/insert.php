@@ -7,7 +7,7 @@ $tname = $_SESSION["table-name"];
 $data = htmlspecialchars($_POST["data"]);
 var_dump($nrow);
 var_dump($tname);
-var_dump($data);
+var_dump($_POST["data"]);
 
 //CHANGE LAST UPDATE TO BE THE USER THAT IS LOGGED IN
 if ($tname == 'expense') {
