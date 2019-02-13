@@ -82,7 +82,7 @@ session_start();
 	    		success: function(response) {
 	    			console.log("Success 3");
 	    			$('#enter').html();
-	    		}
+	    		},
 	    	});
 	    });
 	</script>
