@@ -16,7 +16,7 @@ session_start();
 	<?php require("header.php")?>
 	<div class="container-fluid">
 		<div class="row">
-			<div id="nav" class="col-sm-3 navigator">
+			<div id="nav" class="col-sm-3 navigator" autocomplete="off">
 				<form id="data-entry" action="construct_input.php" method="POST">
 					Select a Category:
 					<br>
