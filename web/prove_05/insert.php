@@ -19,6 +19,6 @@ if ($tname == 'expense') {
 	}
 }
 
-header("Location: enter.php");
+header("Location: https://peaceful-retreat-89945.herokuapp.com/prove_05/enter.php");
 die();
 ?>
