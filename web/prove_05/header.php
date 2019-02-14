@@ -22,9 +22,14 @@ echo "<nav class='navbar navbar-inverse'>
 				<li class=$viz><a href='app.php'>Visualize</a></li>
 				<li class=$enter><a href='enter.php'>Enter Data</a></li>
 			</ul>
-			<ul class='nav navbar-nav navbar-right'>
-				<li><a href='login.php'><span class='glyphicon glyphicon-log-in'></span> Login</a></li>
-			</ul>
+			<ul class='nav navbar-nav navbar-right'>";
+
+if (!$_SESSION["logged_in"]) {
+echo			"<li><a href='login.php'><span class='glyphicon glyphicon-log-in'></span> Login</a></li>";
+} else {
+echo			"<li><a href='logout.php'><span class='glyphicon glyphicon-log-out'></span> Login</a></li>";
+}
+echo		"</ul>
 		</div>
 	</div>
 </nav>";

@@ -15,6 +15,9 @@ session_start();
 </head>
 <body>
 	<?php require("header.php")?>
+	<div class="container-fluid">
+		<h2>Welcome! Please Log In:</h2>
+	</div>
 	<div class="col-sm-4"></div>
 	<div class="col-sm-4">
 		<form id="login" action="login_db.php" method="POST">
@@ -26,7 +29,7 @@ session_start();
 				<label for="password">Password:</label>
 				<input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
 			</div>
-			<input type="submit" value="Submit">
+			<input type="submit" value="Login">
 		</form>
 	</div>
 	<div class="col-sm-4"></div>
