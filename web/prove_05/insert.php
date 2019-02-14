@@ -14,7 +14,7 @@ if ($tname == 'expense') {
 	}
 } elseif ($tname == 'revenue') {
 	for ($i = 0; $i < $nrow; $i++) {
-		$statement = $db->prepare('INSERT INTO expense (description, client, amount, year, date_entered, last_update, goal_id) VALUES (:description, :client, :amount, :year, CURRENT_DATE, 1, (SELECT goal_id FROM goal WHERE year=:year))');
+		$statement = $db->prepare('INSERT INTO revenue (description, client, amount, year, date_entered, last_update, goal_id) VALUES (:description, :client, :amount, :year, CURRENT_DATE, 1, (SELECT goal_id FROM goal WHERE year=:year))');
 		$success = $statement->execute(array(':description' => $data[$i][0], ':client' => $data[$i][1], ':amount' => $data[$i][2], ':year' => $data[$i][3]));
 	}
 }
