@@ -72,15 +72,6 @@ if (!$_SESSION["logged_in"]) {
 	            },
 	        });
 	    });
-
-
-	    document.getElementById("enter").onkeypress = function(e) {
-			var key = e.charCode || e.keyCode || 0;     
-			if (key == 13) {
-				e.preventDefault();
-			}
-		}
-
 	</script>
 </body>
 </html>
