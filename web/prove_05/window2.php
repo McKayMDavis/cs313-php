@@ -1,5 +1,10 @@
 <?php
 session_start();
+if (!$_SESSION["logged_in"]) {
+	flush();
+	header("Location: login.php");
+	die();
+}
 $data = $_SESSION["table-results"];
 $nrow = $_SESSION["table-nrow"];
 

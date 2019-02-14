@@ -1,5 +1,10 @@
 <?php
 session_start();
+if (!$_SESSION["logged_in"]) {
+	flush();
+	header("Location: login.php");
+	die();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
