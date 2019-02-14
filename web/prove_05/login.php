@@ -26,7 +26,7 @@ session_start();
 			<form id="login" action="login_db.php" method="POST">
 				<div class="form-group">
 					<label for="username">Username:</label>
-					<input type="text" class="form-control" id="username" placeholder="Enter username" name="username">
+					<input type="text" class="form-control" id="username" placeholder="Enter username" name="username" autocomplete="off">
 				</div>
 				<div class="form-group">
 					<label for="password">Password:</label>
