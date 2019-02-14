@@ -1,4 +1,12 @@
 <?php
+$current = basename($_SERVER['PHP_SELF']);
+
+if ($current == "app.php") {
+	$viz = 'active';
+} elseif ($current == "enter.php") {
+	$enter = 'active';
+}
+
 echo "<h1 class='heading'>Data Visualization App</h1>";
 echo "<nav class='navbar navbar-inverse'>
 	<div class='container-fluid'>
@@ -11,8 +19,8 @@ echo "<nav class='navbar navbar-inverse'>
 		</div>
 		<div class='collapse navbar-collapse' id='myNavbar'>
 			<ul class='nav navbar-nav'>
-				<li class=$items><a href='app.php'>Visualize</a></li>
-				<li class=$items><a href='enter.php'>Enter Data</a></li>
+				<li class=$viz><a href='app.php'>Visualize</a></li>
+				<li class=$enter><a href='enter.php'>Enter Data</a></li>
 			</ul>
 			<ul class='nav navbar-nav navbar-right'>
 				<li><a href='login.php'><span class='glyphicon glyphicon-log-in'></span> Login</a></li>
