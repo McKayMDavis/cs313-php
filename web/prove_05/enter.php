@@ -23,18 +23,20 @@ if (!$_SESSION["logged_in"]) {
 		<div class="row">
 			<div id="nav" class="col-sm-3 navigator" autocomplete="off">
 				<form id="data-entry" action="construct_input.php" method="POST">
-					Select a Category:
-					<br>
-					<select name="data-type">
-						<!-- <option value="goal">Goals</option> -->
-						<option value="expense">Expenses</option>
-						<option value="revenue">Revenue</option>
-					</select>
-					<br>
-					How Many Rows?
-					<br>
-					<input type="text" name="nrow" maxlength="3">
-					<br>
+					<div class="form-group">
+						<label for="data-type">Category:</label>
+						<br>
+						<select name="data-type">
+							<!-- <option value="goal">Goals</option> -->
+							<option value="expense">Expenses</option>
+							<option value="revenue">Revenue</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="nrow">How Many Rows?</label>
+						<br>
+						<input type="text" name="nrow" maxlength="3">
+					</div>
 					<input type="submit" value="Enter Data">
 				</form>
 			</div>
