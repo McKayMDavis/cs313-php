@@ -26,8 +26,7 @@ if (!$_SESSION["logged_in"]) {
 				<form id="data-entry" action="select.php" method="POST">
 					<div class="form-group">
 						<label for="data-type">Category:</label>
-						<br>
-						<select name="data-type">
+						<select name="data-type" class="form-control">
 							<option value="goal">Goals</option>
 							<option value="expense">Expenses</option>
 							<option value="revenue">Revenue</option>
@@ -36,7 +35,7 @@ if (!$_SESSION["logged_in"]) {
 					<div class="form-group">
 						<label for="year">Year:</label>
 						<br>
-						<select name="year">
+						<select name="year" class="form-control">
 							<?php 
 							foreach (range(2012, 2019) as $year) {
 								echo "<option value=" . $year . ">" . $year . "</option>";
