@@ -42,7 +42,7 @@ if (!$_SESSION["logged_in"]) {
 						?>
 					</select>
 					<br>
-					<input type="submit" value="Submit">
+					<input type="submit" value="View">
 				</form>
 			</div>
 			<div id="plot-window" class="col-sm-8">

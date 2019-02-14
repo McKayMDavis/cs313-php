@@ -35,7 +35,7 @@ if (!$_SESSION["logged_in"]) {
 					<br>
 					<input type="text" name="nrow" maxlength="3">
 					<br>
-					<input type="submit" value="Submit">
+					<input type="submit" value="Enter Data">
 				</form>
 			</div>
 			<div id="plot-window" class="col-sm-8">
