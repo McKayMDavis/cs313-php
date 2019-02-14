@@ -34,7 +34,6 @@ if (!$_SESSION["logged_in"]) {
 					</div>
 					<div class="form-group">
 						<label for="year">Year:</label>
-						<br>
 						<select name="year" class="form-control">
 							<?php 
 							foreach (range(2012, 2019) as $year) {

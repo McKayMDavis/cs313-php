@@ -25,7 +25,6 @@ if (!$_SESSION["logged_in"]) {
 				<form id="data-entry" action="construct_input.php" method="POST">
 					<div class="form-group">
 						<label for="data-type">Category:</label>
-						<br>
 						<select name="data-type" class="form-control">
 							<!-- <option value="goal">Goals</option> -->
 							<option value="expense">Expenses</option>
@@ -34,7 +33,6 @@ if (!$_SESSION["logged_in"]) {
 					</div>
 					<div class="form-group">
 						<label for="nrow">How Many Rows?</label>
-						<br>
 						<input type="text" name="nrow" maxlength="3" class="form-control">
 					</div>
 					<input type="submit" value="Enter Data">
