@@ -15,7 +15,7 @@ session_start();
 </head>
 <body>
 	<?php require("header.php")?>
-	<div class="container-fluid">
+	<div class="container-fluid row">
 		<h2>Welcome! Please Log In:</h2>
 	</div>
 	<div class="col-sm-4"></div>
