@@ -24,24 +24,24 @@ if (!$_SESSION["logged_in"]) {
 		<div class="row">
 			<div id="nav" class="col-sm-3 navigator">
 				<form id="data-entry" action="select.php" method="POST">
-					Select a Category:
-					<br>
-					<select name="data-type">
-						<option value="goal">Goals</option>
-						<option value="expense">Expenses</option>
-						<option value="revenue">Revenue</option>
-					</select>
-					<br>
-					Select a Year:
-					<br>
-					<select name="year">
-						<?php 
-						foreach (range(2012, 2019) as $year) {
-							echo "<option value=" . $year . ">" . $year . "</option>";
-						}
-						?>
-					</select>
-					<br>
+					<div class="form-group">
+						<label for="data-type">Category:</label>
+						<select name="data-type">
+							<option value="goal">Goals</option>
+							<option value="expense">Expenses</option>
+							<option value="revenue">Revenue</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="year">Year:</label>
+						<select name="year">
+							<?php 
+							foreach (range(2012, 2019) as $year) {
+								echo "<option value=" . $year . ">" . $year . "</option>";
+							}
+							?>
+						</select>
+					</div>
 					<input type="submit" value="View">
 				</form>
 			</div>
