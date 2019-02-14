@@ -15,23 +15,27 @@ session_start();
 </head>
 <body>
 	<?php require("header.php")?>
-	<div class="container-fluid row">
-		<h2>Welcome! Please Log In:</h2>
+	<div class="row">
+		<div class="container-fluid">
+			<h2>Welcome! Please Log In:</h2>
+		</div>
 	</div>
-	<div class="col-sm-4"></div>
-	<div class="col-sm-4">
-		<form id="login" action="login_db.php" method="POST">
-			<div class="form-group">
-				<label for="username">Username:</label>
-				<input type="text" class="form-control" id="username" placeholder="Enter username" name="username">
-			</div>
-			<div class="form-group">
-				<label for="password">Password:</label>
-				<input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
-			</div>
-			<input type="submit" value="Login">
-		</form>
+	<div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<form id="login" action="login_db.php" method="POST">
+				<div class="form-group">
+					<label for="username">Username:</label>
+					<input type="text" class="form-control" id="username" placeholder="Enter username" name="username">
+				</div>
+				<div class="form-group">
+					<label for="password">Password:</label>
+					<input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
+				</div>
+				<input type="submit" value="Login">
+			</form>
+		</div>
+		<div class="col-sm-4"></div>
 	</div>
-	<div class="col-sm-4"></div>
 </body>
 </html>
