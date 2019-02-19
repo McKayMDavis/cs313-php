@@ -3,9 +3,9 @@ require('db.php');
 $table = htmlspecialchars($_POST["data-type"]);
 
 if ($table == 'expense') {
-	$query = $db->query('SELECT * FROM expense WHERE expense_id=1');
+	$query = $db->query('SELECT expense_id, description, vendor, amount, year, date_entered, last_update FROM expense WHERE expense_id=1');
 } elseif ($table == 'revenue') {
-	$query = $db->query('SELECT * FROM revenue WHERE revenue_id=1');
+	$query = $db->query('SELECT revenue_id, description, client, amount, year, date_entered, last_update FROM revenue WHERE revenue_id=1');
 } // elseif ($table == 'goal') {
 // 	$query = $db->query('SELECT * FROM goal WHERE goal_id=1');
 // }
