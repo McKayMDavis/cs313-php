@@ -13,7 +13,12 @@ $last_update = $_SESSION["logged_in"]["id"];
 
 $statement1 = 
 $db->prepare("INSERT INTO users(username, password, user_type, date_entered, last_update) VALUES (:username, :password, :user_type, CURRENT_DATE, :last_update)");
-$statement1->execute(array(":username"=>$username, ":password"=>$password, ":user_type"=>$user_type_id, ":last_update"=>$last_update));
+$success = $statement1->execute(array(":username"=>$username, ":password"=>$password, ":user_type"=>$user_type_id, ":last_update"=>$last_update));
+if (!$success) {
+	flush();
+	header("Location: register.php?success=F");
+	die();
+}
 
 flush();
 header("Location: register.php");

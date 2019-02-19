@@ -23,6 +23,11 @@ if ($_SESSION["logged_in"]["type"] != 1) {
 	<div class="row">
 		<div class="container-fluid">
 			<h2 class="text-center">Register a New User:</h2>
+			<?php
+			if (isset($_GET["success"]) && $_GET["success"]="F") {
+				echo "Username already in use";
+			}
+			?>
 		</div>
 	</div>
 	<div class="row">
