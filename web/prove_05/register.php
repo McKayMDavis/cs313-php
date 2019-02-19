@@ -41,7 +41,7 @@ if ($_SESSION["logged_in"] != 1) {
 					<label for="password-conf">Re-Enter Password:</label>
 					<input type="password" class="form-control" id="password-conf" placeholder="Enter password" name="password-conf" required="required">
 				</div>
-				<input type="submit" value="Login">
+				<input type="submit" value="Register">
 			</form>
 		</div>
 		<div class="col-sm-4"></div>
