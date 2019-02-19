@@ -1,6 +1,6 @@
 <?php
 session_start();
-if ($_SESSION["logged_in"] != 1) {
+if ($_SESSION["logged_in"]["type"] != 1) {
 	flush();
 	header("Location: login.php");
 	die();
