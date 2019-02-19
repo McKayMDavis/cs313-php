@@ -39,6 +39,13 @@ if (!isset($_SESSION["logged_in"])) {
 				</form>
 			</div>
 			<div id="plot-window" class="col-sm-8">
+				<?php
+				if (isset($_GET["success"]) && $_GET["success"]=="F") {
+					echo "<h4 class='text-center' style='color:darkred'>Something went wrong. Please try again.</h4>";
+				} elseif (isset($_GET["success"]) && $_GET["success"]=="T") {
+					echo "<h4 class='text-center' style='color:darkgreen'>Data entry successful.</h4>";
+				}
+				?>
 			</div>
 		</div>
 	</div>
