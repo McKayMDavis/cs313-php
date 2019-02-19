@@ -34,7 +34,6 @@ session_start();
 				</div>
 				<input type="submit" value="Login">
 			</form>
-			<?php echo password_hash("admin", PASSWORD_DEFAULT); ?>
 		</div>
 		<div class="col-sm-4"></div>
 	</div>
