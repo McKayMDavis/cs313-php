@@ -20,8 +20,13 @@ echo "<nav class='navbar navbar-inverse'>
 		<div class='collapse navbar-collapse' id='myNavbar'>
 			<ul class='nav navbar-nav'>
 				<li class=$viz><a href='app.php'>Visualize</a></li>
-				<li class=$enter><a href='enter.php'>Enter Data</a></li>
-			</ul>
+				<li class=$enter><a href='enter.php'>Enter Data</a></li>";
+if ($_SESSION["logged_in"] == 1) {
+	echo        "<li class=$enter><a href='register.php'>Register a User</a></li>";
+}
+
+
+echo		"</ul>
 			<ul class='nav navbar-nav navbar-right'>";
 
 if ($_SESSION["logged_in"]) {

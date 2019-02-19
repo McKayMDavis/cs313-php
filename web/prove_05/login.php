@@ -34,7 +34,6 @@ session_start();
 				</div>
 				<input type="submit" value="Login">
 			</form>
-			<a href="register.php">Register</a>
 		</div>
 		<div class="col-sm-4"></div>
 	</div>
