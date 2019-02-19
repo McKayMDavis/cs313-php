@@ -14,11 +14,13 @@ $statement2 = $db->prepare("SELECT password FROM users WHERE password=:password"
 $statement2->execute(array(":password"=>$password));
 $results2 = $statement2->fetchAll(PDO::FETCH_ASSOC);
 
+echo $results2[0]['password'];
+
 if (password_verify($password, $results2[0]['password'])) {
 	$logged_in = True;
 }
 
-$_SESSION["logged_in"] = $logged_in;
+/*$_SESSION["logged_in"] = $logged_in;
 if ($logged_in) {
 	flush();
 	header("Location: app.php");
@@ -27,5 +29,5 @@ if ($logged_in) {
 	flush();
 	header("Location: login.php");
 	die();
-}
+}*/
 ?>
