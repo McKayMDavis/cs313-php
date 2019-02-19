@@ -14,7 +14,7 @@ $statement2 = $db->prepare("SELECT password FROM users WHERE password=:password"
 $statement2->execute(array(":password"=>$password));
 $results2 = $statement2->fetchAll(PDO::FETCH_ASSOC);
 
-if (sizeof($results1) > 0 && sizeof(results2) > 0) {
+if (password_verify($password, $results2['password'])) {
 	$logged_in = True;
 }
 

@@ -17,13 +17,13 @@ session_start();
 	<?php require("header.php")?>
 	<div class="row">
 		<div class="container-fluid">
-			<h2 class="text-center">Welcome! Please Log In:</h2>
+			<h2 class="text-center">Welcome! Create an Account:</h2>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-sm-4"></div>
 		<div class="col-sm-4">
-			<form id="login" action="login_db.php" method="POST">
+			<form id="login" action="register_db.php" method="POST">
 				<div class="form-group">
 					<label for="username">Username:</label>
 					<input type="text" class="form-control" id="username" placeholder="Enter username" name="username" autocomplete="off">
@@ -34,7 +34,6 @@ session_start();
 				</div>
 				<input type="submit" value="Login">
 			</form>
-			<a href="register.php">Register</a>
 		</div>
 		<div class="col-sm-4"></div>
 	</div>
