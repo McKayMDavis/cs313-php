@@ -21,7 +21,7 @@ echo "<nav class='navbar navbar-inverse'>
 			<ul class='nav navbar-nav'>
 				<li class=$viz><a href='app.php'>Visualize</a></li>
 				<li class=$enter><a href='enter.php'>Enter Data</a></li>";
-if ($_SESSION["logged_in"] == 1) {
+if ($_SESSION["logged_in"]["type"] == 1) {
 	echo        "<li class=$enter><a href='register.php'>Register a User</a></li>";
 }
 
