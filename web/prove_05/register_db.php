@@ -22,6 +22,6 @@ try {
 }
 
 flush();
-header("Location: register.php");
+header("Location: register.php?success=T");
 die();
 ?>

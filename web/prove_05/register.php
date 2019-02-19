@@ -26,6 +26,8 @@ if ($_SESSION["logged_in"]["type"] != 1) {
 			<?php
 			if (isset($_GET["success"]) && $_GET["success"]="F") {
 				echo "<h4 class='text-center' style='color:darkred'>Username already in use. Please try again.</h4>";
+			} elseif (isset($_GET["success"]) && $_GET["success"]="T") {
+				echo "<h4 class='text-center' style='color:darkgreen'>User succesfully created.</h4>";
 			}
 			?>
 		</div>
