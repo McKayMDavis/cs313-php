@@ -5,6 +5,8 @@ if ($current == "app.php") {
 	$viz = 'active';
 } elseif ($current == "enter.php") {
 	$enter = 'active';
+} elseif ($current == "register.php") {
+	$register = 'active';
 }
 
 echo "<h1 class='heading'>Data Visualization App</h1>";
@@ -22,7 +24,7 @@ echo "<nav class='navbar navbar-inverse'>
 				<li class=$viz><a href='app.php'>Visualize</a></li>
 				<li class=$enter><a href='enter.php'>Enter Data</a></li>";
 if ($_SESSION["logged_in"]["type"] == 1) {
-	echo        "<li class=$enter><a href='register.php'>Register a User</a></li>";
+	echo        "<li class=$register><a href='register.php'>Register a User</a></li>";
 }
 
 
