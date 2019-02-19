@@ -1,6 +1,6 @@
 <?php
 session_start();
-$_SESSION["logged_in"] = False;
+unset($_SESSION["logged_in"]);
 
 flush();
 header("Location: login.php");
