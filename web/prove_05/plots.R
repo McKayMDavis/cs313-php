@@ -5,7 +5,7 @@ library(tidyverse)
 p <- data %>% 
   ggplot(aes(x = date_entered, y = amount)) +
   geom_point()
-ggsave("temp.png", p, "png", "/app/web/prove_05/")
+ggsave("temp.png", p, "png", "/app/web/prove_05/", height = 8)
 
 # png(filename = "/app/web/prove_05/temp.png", width = 500, height = 500)
 # plot(data$date_entered, data$amount)
