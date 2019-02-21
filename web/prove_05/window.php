@@ -51,7 +51,7 @@ echo "</div>
 
 //Had to use R buildpack to get Rscript installed in the slug
 exec("/app/bin/Rscript /app/web/prove_05/plots.R");
-echo "<img src='temp.png' alt='Plot Image' style='width:100%; height:250px;'></img>";
+echo "<img src='temp.png' alt='Plot Image' style='width:100%; height:500px;'></img>";
 
 echo "</div></div>";
 ?>
