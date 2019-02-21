@@ -49,7 +49,7 @@ if ($_SESSION["logged_in"]["type"] != 1) {
 					<input type="password" class="form-control" id="password-conf" placeholder="Enter password" name="password-conf" required="required">
 				</div>
 				<div class="form-group">
-					<label for="user-type">Username:</label>
+					<label for="user-type">User Permissions:</label>
 					<select name="user-type" class="form-control">
 						<option value="Admin">Admin</option>
 						<option value="User">User</option>
