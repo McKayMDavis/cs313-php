@@ -56,6 +56,7 @@ if (sizeof($errors) > 0){
 	var_dump($errors);
 }
 echo "<img src='$pngName' alt='Plot Image' style='width:100%;'></img>";
+echo "<a href='$pngName'>Download Plot Image</a><br>";
 
 echo "</div></div>";
 ?>
