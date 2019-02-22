@@ -1,10 +1,11 @@
 <?php
 session_start();
-if (!isset($_SESSION["logged_in"])) {
-	flush();
-	header("Location: login.php");
-	die();
+if (!isset($_SESSION["plot-iter"])) {
+	$_SESSION["plot-iter"] = 1;
+} else {
+	$_SESSION["plot-iter"]+=1;
 }
+$pngName = "temp" . $_SESSION["plot-iter"] . ".png";
 $data = $_SESSION["query-results"];
 $headers = array();
 $rows = array();
@@ -50,12 +51,11 @@ echo "</div>
 	<div id='data' class='tab-pane fade'>";
 
 //Had to use R buildpack to get Rscript installed in the slug
-unlink("/app/web/prove_05/temp.png");
-exec("/app/bin/Rscript /app/web/prove_05/plots.R", $errors);
+exec("/app/bin/Rscript /app/web/prove_05/plots.R $pngName", $errors);
 if (sizeof($errors) > 0){
 	var_dump($errors);
 }
-echo "<img src='https://peaceful-retreat-89945.herokuapp.com/prove_05/temp.png' alt='Plot Image' style='width:100%;'></img>";
+echo "<img src='$pngName' alt='Plot Image' style='width:100%;'></img>";
 
 echo "</div></div>";
 ?>

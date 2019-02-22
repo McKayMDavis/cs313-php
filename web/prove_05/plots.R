@@ -1,7 +1,6 @@
 args <- commandArgs(TRUE)
 data <- read.csv("/app/web/prove_05/temp.csv")
-
-unlink("/app/web/prove_05/temp.png")
+fname <- args[1]
 
 library(tidyverse)
 p <- data %>%
@@ -10,7 +9,7 @@ p <- data %>%
   theme_bw()
 
 
-tryCatch(ggsave("temp.png", p, "png", "/app/web/prove_05/", height = 6, width = 10)
+tryCatch(ggsave(fname, p, "png", "/app/web/prove_05/", height = 6, width = 10)
 , warning = function(w) {
   cat(w)
 }, error = function(e) {
