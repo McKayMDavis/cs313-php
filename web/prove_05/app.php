@@ -46,6 +46,9 @@ if (!isset($_SESSION["logged_in"])) {
 				</form>
 			</div>
 			<div id="plot-window" class="col-sm-8">
+				<div id="loader" class="spinner-border" role="status" style="display: none">
+					<span class="sr-only">Loading...</span>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -56,6 +59,7 @@ if (!isset($_SESSION["logged_in"])) {
 	    frm.submit(function (e) {
 
 	        e.preventDefault();
+	        $('#loader').show();
 
 	        $.ajax({
 	            type: frm.attr('method'),
@@ -68,6 +72,7 @@ if (!isset($_SESSION["logged_in"])) {
 				    	url: 'window.php',
 				    	success: function(response) {
 				    		console.log("Success 2");
+				    		$('#loader').hide();
 				    		$("#plot-window").html(response);
 				    	}
 				    });
