@@ -46,7 +46,7 @@ if (!isset($_SESSION["logged_in"])) {
 				</form>
 			</div>
 			<div id="plot-window" class="col-sm-8">
-				<div class="text-center"><div id="loader" class="loader"></div></div>
+				<div id="loader" class="loader"></div>
 			</div>
 		</div>
 	</div>
