@@ -45,9 +45,11 @@ if (!isset($_SESSION["logged_in"])) {
 					<input type="submit" value="View">
 				</form>
 			</div>
-			<div id="plot-window" class="col-sm-8">
+			<div class="col-sm-8">
 				<div id="loader" class="loader"></div>
+				<div id="plot-window"></div>
 			</div>
+
 		</div>
 	</div>
 
