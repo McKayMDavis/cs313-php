@@ -51,7 +51,9 @@ echo "</div>
 
 //Had to use R buildpack to get Rscript installed in the slug
 exec("/app/bin/Rscript /app/web/prove_05/plots.R", $errors);
-var_dump($errors);
+if (sizeof($errors) > 0){
+	var_dump($errors);
+}
 echo "<img src='temp.png' alt='Plot Image' style='width:100%;'></img>";
 
 echo "</div></div>";
