@@ -1,6 +1,8 @@
 args <- commandArgs(TRUE)
 data <- read.csv("/app/web/prove_05/temp.csv")
 
+unlink("/app/web/prove_05/temp.png")
+
 library(tidyverse)
 p <- data %>%
   ggplot(aes(x = date_entered, y = amount, fill = date_entered)) +

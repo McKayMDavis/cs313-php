@@ -27,7 +27,7 @@ if (!isset($_SESSION["logged_in"])) {
 					<div class="form-group">
 						<label for="data-type">Category:</label>
 						<select name="data-type" class="form-control">
-							<option value="goal">Goals</option>
+							<!--<option value="goal">Goals</option>-->
 							<option value="expense">Expenses</option>
 							<option value="revenue">Revenue</option>
 						</select>
