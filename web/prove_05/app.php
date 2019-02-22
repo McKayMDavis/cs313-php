@@ -60,6 +60,7 @@ if (!isset($_SESSION["logged_in"])) {
 
 	        e.preventDefault();
 	        $('#loader').show();
+	        $('#plot-window').hide();
 
 	        $.ajax({
 	            type: frm.attr('method'),
@@ -74,6 +75,7 @@ if (!isset($_SESSION["logged_in"])) {
 				    		console.log("Success 2");
 				    		$('#loader').hide();
 				    		$("#plot-window").html(response);
+				    		$('#plot-window').show();
 				    	}
 				    });
 
