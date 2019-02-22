@@ -55,7 +55,7 @@ exec("/app/bin/Rscript /app/web/prove_05/plots.R", $errors);
 if (sizeof($errors) > 0){
 	var_dump($errors);
 }
-echo "<img src='/app/web/prove_05/temp.png' alt='Plot Image' style='width:100%;'></img>";
+echo "<img src='https://peaceful-retreat-89945.herokuapp.com/prove_05/temp.png' alt='Plot Image' style='width:100%;'></img>";
 
 echo "</div></div>";
 ?>
