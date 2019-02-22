@@ -50,6 +50,7 @@ echo "</div>
 	<div id='data' class='tab-pane fade'>";
 
 //Had to use R buildpack to get Rscript installed in the slug
+unlink("/app/web/prove_05/temp.png");
 exec("/app/bin/Rscript /app/web/prove_05/plots.R", $errors);
 if (sizeof($errors) > 0){
 	var_dump($errors);
