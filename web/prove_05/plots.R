@@ -3,7 +3,7 @@ data <- read.csv("/app/web/prove_05/temp.csv")
 
 library(tidyverse)
 p <- data %>% 
-  ggplot(aes(x = date_entered, y = amount)) +
+  ggplot(aes(x = date_entered, y = amount, fill = date_entered)) +
   geom_boxplot() +
   theme_bw()
 ggsave("temp.png", p, "png", "/app/web/prove_05/", height = 6, width = 10)
