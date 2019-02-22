@@ -60,7 +60,7 @@ if (!isset($_SESSION["logged_in"])) {
 
 	        e.preventDefault();
 	        $('#loader').show();
-	        $('#plot-window').hide();
+	        $('#plot-window').css({ opacity: 0.6 });
 
 	        $.ajax({
 	            type: frm.attr('method'),
