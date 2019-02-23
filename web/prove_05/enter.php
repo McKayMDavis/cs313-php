@@ -33,7 +33,7 @@ if (!isset($_SESSION["logged_in"])) {
 					</div>
 					<div class="form-group">
 						<label for="nrow">How Many Rows?</label>
-						<input type="text" name="nrow" maxlength="3" class="form-control" autocomplete="off">
+						<input type="number" name="nrow" maxlength="3" class="form-control" autocomplete="off">
 					</div>
 					<input type="submit" value="Enter Data">
 				</form>
