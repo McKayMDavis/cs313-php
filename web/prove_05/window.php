@@ -1,5 +1,10 @@
 <?php
 session_start();
+if (!isset($_SESSION["logged-in"])) {
+	flush();
+	header("Location: login.php");
+	die();
+}
 if (!isset($_SESSION["plot-iter"])) {
 	$_SESSION["plot-iter"] = 1;
 } else {
