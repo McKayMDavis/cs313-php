@@ -8,7 +8,7 @@ CREATE TABLE user_type (
 CREATE TABLE users (
   user_id        SERIAL       PRIMARY KEY
 , username       VARCHAR(100) NOT NULL UNIQUE
-, password       VARCHAR(100) NOT NULL
+, password       VARCHAR(255) NOT NULL
 , user_type      INT          NOT NULL REFERENCES user_type(user_type_id)
 , date_entered   DATE         NOT NULL
 , last_update    INT          NOT NULL REFERENCES users(user_id)

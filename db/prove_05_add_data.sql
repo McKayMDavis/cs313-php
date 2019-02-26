@@ -3,7 +3,8 @@ INSERT INTO user_type (user_type) VALUES
 , ('user');
 
 INSERT INTO users(username, password, user_type, date_entered, last_update) VALUES
-  ('bob', 'bob123', 1, '2018-01-01', 1);
+  ('admin', '$2y$10$3FZpoV4sbTw5cmtF1kwDzurIuqdErxxzpDHZhj975UkBzxuOWMOYK
+', 1, '2018-01-01', 1);
 
 INSERT INTO goal(goal_expense, goal_revenue, goal_profits, year, date_entered, last_update) VALUES
   (100000, 300000, 200000, 2018, '2018-01-01', 1);
